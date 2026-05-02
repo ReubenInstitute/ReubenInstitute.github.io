@@ -13,7 +13,7 @@ produce meticulously curated content across **print**, **digital**, **audio**, a
 By combining rigorous academic standards with modern technology, the Institute ensures that
 historical traditions remain accessible and accurate for contemporary audiences.
 
-[Team](admin/Team)
+[Team](admin/Team.md)
 
 #### Contact
 
@@ -31,7 +31,7 @@ historical traditions remain accessible and accurate for contemporary audiences.
 
 #### Following
 
-[Following](admin/Following)
+[Following](admin/Following.md)
 
 ## Scholarly
 
