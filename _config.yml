@@ -1,5 +1,5 @@
 defaults:
-	- scope:
-			path: ""
-		values:
-			permalink: /:path.md
+  - scope:
+      path: ""
+    values:
+      permalink: /:path.md
