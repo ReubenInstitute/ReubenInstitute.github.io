@@ -1,3 +1,7 @@
+---
+permalink: /
+---
+
 # Reuben Institute
 
 _**"obsession for accuracy"**_
