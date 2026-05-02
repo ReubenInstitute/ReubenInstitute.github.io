@@ -2,7 +2,7 @@
 
 ### Hebrew Bible
 
-* **The Hebrew Bible (Tanakh):**  *(Hebrew)* This canonical collection of Hebrew texts comprises the Torah, Nevi'im (Prophets), and Ketuvim (Writings), based on the accurate Leningrad Codex. https://www.sefaria.org.il/download/version/Genesis%20-%20he%20-%20Tanach%20with%20Ta'amei%20Hamikra.json
+* **The Hebrew Bible (Tanakh):**  *(Hebrew)* This canonical collection of Hebrew texts comprises the Torah, Nevi'im (Prophets), and Ketuvim (Writings), based on the accurate Leningrad Codex. [www.sefaria.org.il/download/version/Genesis - he - Tanach with Ta'amei Hamikra.json](https://www.sefaria.org.il/download/version/Genesis%20-%20he%20-%20Tanach%20with%20Ta'amei%20Hamikra.json)
 
 #### Targums (Aramaic Translations of the Hebrew Bible)
 
@@ -18,7 +18,7 @@
 
 #### Additional Texts
 
-* **JPS 1917 English Translation of the Hebrew Bible:** *(English)* Published by the Jewish Publication Society in 1917, this translation is known for its accuracy and fidelity to the original Hebrew. https://www.sefaria.org.il/download/version/Genesis%20-%20en%20-%20The%20Holy%20Scriptures:%20A%20New%20Translation%20(JPS%201917).json
+* **JPS 1917 English Translation of the Hebrew Bible:** *(English)* Published by the Jewish Publication Society in 1917, this translation is known for its accuracy and fidelity to the original Hebrew. [www.sefaria.org.il/download/version/Genesis - en - The Holy Scriptures: A New Translation (JPS%201917).json](https://www.sefaria.org.il/download/version/Genesis%20-%20en%20-%20The%20Holy%20Scriptures:%20A%20New%20Translation%20(JPS%201917).json)
 
 * **Saadia Gaon's Tafsir:** *(Arabic)* Created in the 10th century, this Arabic translation and commentary on the Hebrew Bible aimed to make biblical texts accessible to Arabic-speaking Jews.
 

@@ -3,6 +3,7 @@
 A clock that displays both Gregorian and Hebrew dates using an Arduino board, a GPS module, and a LED screen. The time is automatically adjusted using real-time data from the GPS module. The software calculates all official Hebrew holidays, fasts, and Israeli national hoslidays.
 
 ### Wall/Desktop
+
 | Size | Display | Resolution |
 |---|---|---|
 |  | LED Panel | 256x64 |
@@ -10,12 +11,14 @@ A clock that displays both Gregorian and Hebrew dates using an Arduino board, a 
 | 4-7 inch | E-Paper | 320x240 |
 
 ### Mobile
+
 | Size | Display | Resolution |
 |---|---|---|
 | 4 inch | LCD | 320x240 |
 | 4 inch | E-Paper | 320x240 |
 
 ### Wearable
+
 | Size | Display | Resolution |
 |---|---|---|
 | 1 inch | OLED | 240x240 |
