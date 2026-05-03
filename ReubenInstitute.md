@@ -4,6 +4,8 @@ permalink: /
 
 # Reuben Institute
 
+[LOGO](img/logo.png)
+
 _**"obsession for accuracy"**_
 
 Reuben Institute is a scholarly organization and publishing studio dedicated to disseminating
@@ -19,6 +21,7 @@ historical traditions remain accessible and accurate for contemporary audiences.
 
 * [Website](https://reubeninstitute.github.io)
 * [GitHub](https://github.com/reubeninstitute)
+* [Google Drive](https://drive.google.com/drive/folders/1OTBOiLWt1mf_4Fu4UF7HdHuzJFJjg5BA)
 * [Email](mailto:reubeninstitute@gmail.com)
 
 #### Channels
