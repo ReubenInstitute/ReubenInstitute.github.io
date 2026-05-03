@@ -49,3 +49,23 @@ Each chapter is set to a background song generated with **Suno**, accompanied by
 <a href="https://drive.google.com/file/d/1J5TfsFInY6DL0GDPKmYIS8h7QmbNIpio/view"><img src="img/psalm-067.png" width="120" alt="Psalm 67"></a>
 
 <a href="https://drive.google.com/file/d/1trlyfcNjI7N3NGGIjq93XoMLl_5kZ215/view"><img src="img/psalm-070.png" width="120" alt="Psalm 70"></a>
+
+<a href="https://drive.google.com/file/d/1VXk7aFH2IJef_vMnx3FwcOVYTwk4ZTQ5/view"><img src="img/psalm-075.png" width="120" alt="Psalm 75"></a>
+
+<a href="https://drive.google.com/file/d/1p4MXjtPpieCwNt7vaR7LyFqwZzH7CN32/view"><img src="img/psalm-084.png" width="120" alt="Psalm 84"></a>
+
+<a href="https://drive.google.com/file/d/1tI_Z8d2rgQ7ClxnJ70qHPC2GZJ7ouQ05/view"><img src="img/psalm-090.png" width="120" alt="Psalm 90"></a>
+
+<a href="https://drive.google.com/file/d/100lyK3XFMj6q7bpw1_pMlVCLRoc1Y15P/view"><img src="img/psalm-093.png" width="120" alt="Psalm 93"></a>
+
+<a href="https://drive.google.com/file/d/1ACdy7lH45ukodDIB7sZJiqo3LIA2VDrX/view"><img src="img/psalm-099.png" width="120" alt="Psalm 99"></a>
+
+<a href="https://drive.google.com/file/d/1ubu_6waZ5bAzZHiPOK2iN-k5M6yulL2s/view"><img src="img/psalm-100.png" width="120" alt="Psalm 100"></a>
+
+<a href="https://drive.google.com/file/d/1gox4WxF2-Ubg95PkO2KJExQtIyO20c7e/view"><img src="img/psalm-101.png" width="120" alt="Psalm 101"></a>
+
+<a href="https://drive.google.com/file/d/1bXQo3Cm-LSkKibk7qAynFsEI0eEZ8pIg/view"><img src="img/psalm-117.png" width="120" alt="Psalm 117"></a>
+
+<a href="https://drive.google.com/file/d/1fRYvngnwinEUMAm9hCGdBCL8gottb31A/view"><img src="img/psalm-129.png" width="120" alt="Psalm 129"></a>
+
+<a href="https://drive.google.com/file/d/1s-ZEz7Pvp2Bx16HBj2Nzo9BpaeEkLP6k/view"><img src="img/psalm-130.png" width="120" alt="Psalm 130"></a>
