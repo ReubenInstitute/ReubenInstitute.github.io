@@ -10,8 +10,42 @@ The mathematical problem is defined as follows:
 
 > The goal is to divide the 150 Psalms, with their precise verse letter-lengths, into 28 daily readings to minimize the maximum difference in total letter-length between any two readings, subject to the following constraints:
 >
-> *   Psalms must be sequenced by cycling sequentially through their five traditional books.
+> *   Psalms must be sequenced by cycling through the five traditional books.
 > *   Readings must start with Psalm 1 and end with Psalm 150.
-> *   Shabbat readings must be double the letter-length of standard weekday readings.
+> *   Shabbat readings must be double the length of standard weekday readings.
 > *   Psalm 119 must be in a Shabbat reading.
 > *   Daily readings are limited to 9 psalms for weekdays and 16 for Shabbat.
+
+
+## Division
+
+| Week | Day | Psalms |
+| :--- | :--- | :--- |
+| First Week | Sunday | 1, 18, 49 |
+|  | Monday | 78, 93 |
+|  | Tuesday | 37, 107 |
+|  | Wednesday | 68, 73, 97 |
+|  | Thursday | 22, 65, 109 |
+|  | Friday | 89, 102, 117 |
+|  | Shabbat | 35, 69, 74, 106, 147 |
+| Second Week | Sunday | 40, 44, 77, 100, 134 |
+|  | Monday | 38, 71, 88, 101 |
+|  | Tuesday | 9, 55, 82, 139 |
+|  | Wednesday | 27, 105, 118 |
+|  | Thursday | 50, 80, 104 |
+|  | Friday | 34, 59, 84, 136 |
+|  | Shabbat | 103, 119 |
+| Third Week | Sunday | 25, 51, 86, 90 |
+|  | Monday | 10, 45, 79, 145 |
+|  | Tuesday | 33, 66, 94, 135 |
+|  | Wednesday | 17, 52, 83, 92, 144 |
+|  | Thursday | 7, 57, 81, 91, 132 |
+|  | Friday | 39, 72, 85, 96, 116 |
+|  | Shabbat | 19, 41, 42, 56, 75, 76, 87, 95, 98, 99, 115, 131, 143 |
+| Fourth Week | Sunday | 5, 32, 48, 60, 110, 140 |
+|  | Monday | 21, 31, 58, 62, 141, 148 |
+|  | Tuesday | 15, 30, 36, 46, 63, 108, 137 |
+|  | Wednesday | 2, 4, 47, 53, 64, 112, 128, 146 |
+|  | Thursday | 16, 26, 28, 43, 54, 61, 111, 142 |
+|  | Friday | 6, 8, 24, 67, 70, 122, 126, 138, 149 |
+|  | Shabbat | 3, 11, 12, 13, 14, 20, 23, 29, 113, 114, 124, 125, 127, 129, 130, 150 |

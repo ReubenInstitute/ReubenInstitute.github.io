@@ -79,3 +79,4 @@ Each booklet's cover illustration reflects its theme:
 * **Mikvah:** Rippling, clear water with soft reflections.
 * **Tzedakah:** A traditional charity box with radiating lines suggesting community and giving.
 
+## [Crowdfunding Campaign](Campaign.md)
