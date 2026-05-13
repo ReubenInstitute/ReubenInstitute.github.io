@@ -8,12 +8,112 @@ Each chapter is set to a background song generated with **Suno**, accompanied by
 
 **Distribution:** YouTube, YouTube Shorts, Instagram, TikTok, Spotify (audio-only), WhatsApp Channel, and the IVR phone line.
 
-
 ## Releases
 
 ### Psalm 8
 
-<a href="https://drive.google.com/file/d/1QZdkl2kauJXtHUhZ_Gihyxi37HXZXmNS/view"><img src="img/psalm-008.png" width="120" alt="Psalm 8"></a> David looks at the night sky and marvels that the God who created such vastness pays any attention to human beings at all. He reflects on the surprising status God has given humans — made just below divine beings and entrusted with dominion over all the earth: sheep, cattle, birds, and fish. The psalm opens and closes with the same declaration: God's name is majestic everywhere.
+![](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms/covers/square/psalm008.jpg)
+
+David looks at the night sky and marvels that the God who created such vastness pays any attention to human beings at all. He reflects on the surprising status God has given humans — made just below divine beings and entrusted with dominion over all the earth: sheep, cattle, birds, and fish. The psalm opens and closes with the same declaration: God's name is majestic everywhere. 
+
+<video preload="none" controls="controls" height="200" width="356" poster="https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms/covers/horizontal/psalm008.jpg">
+	<source src="https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms+/horizontal/psalm008.mp4">
+</video>
+
+### Psalm 46
+
+![](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms/covers/square/psalm046.jpg)
+
+A hymn of fearless trust by the Sons of Korah. Even if the physical world dissolves — mountains collapsing into the sea — there is a refuge that remains unshaken. The psalm contrasts global chaos with the serene river gladdening the city of the Divine, and depicts the end of all war through supreme power. It concludes with a call to be still and acknowledge His sovereignty.
+
+<video preload="none" controls height="200" width="356"
+  poster="https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms/covers/horizontal/psalm046.jpg">
+  <source src="https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms+/horizontal/psalm046.mp4"></source>
+</video>
+
+### Psalm 75
+
+![](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms/covers/square/psalm075.jpg)
+
+A prophetic song by Asaph balancing thanksgiving with a stern warning against human arrogance. It asserts that judgment belongs solely to God, who chooses the appointed time to act — lowering one and lifting another. The psalm uses the vivid image of a foaming cup of wine that the wicked must drink to the dregs, ending with the assurance that the horns of the proud will be cut off while the righteous are exalted.
+
+<video preload="none" controls height="200" width="356"
+  poster="https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms/covers/horizontal/psalm075.jpg">
+  <source src="https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms+/horizontal/psalm075.mp4"></source>
+</video>
+
+### 150 Day Psalm Cycle
+
+The 150 Day Psalm Cycle publishes one psalm per day, drawn round‑robin from the five books to maximise variety across emotional and poetic terrain.
+
+| No | Book | Psalm |
+|-----|------|----------|
+| 1 ✅ | 1 | 8 |
+| 2 ✅ | 2 | 46 |
+| 3 ✅ | 3 | 75 |
+| 4 | 4 | 90 |
+| 5 | 5 | 117 |
+| 6 | 1 | 32 |
+| 7 | 2 | 44 |
+| 8 | 3 | 84 |
+| 9 | 4 | 93 |
+| 10 | 5 | 129 |
+| 11 | 1 | 35 |
+| 12 | 2 | 47 |
+| 13 | 3 | 86 NEW |
+| 14 | 4 | 99 |
+| 15 | 5 | 130 |
+| 16 | 1 | 41 |
+| 17 | 2 | 48 |
+| 18 | 3 | 79 NEW |
+| 19 | 4 | 100 |
+| 20 | 5 | 113 NEW |
+| 21 | 1 | 2 OLD |
+| 22 | 2 | 50 |
+| 23 | 3 | 82 NEW |
+| 24 | 4 | 101 |
+| 25 | 5 | 121 NEW |
+| 26 | 1 | 15 OLD |
+| 27 | 2 | 51 |
+| 28 | 3 | 88 NEW |
+| 29 | 4 | 104 NEW |
+| 30 | 5 | 108 NEW |
+| 31 | 1 |  |
+| 32 | 2 |  |
+| 33 | 3 |  |
+
+---
+
+## Downloads
+
+### Psalm 8
+
+| | Audio | Video |
+| --- | --- | --- |
+| Library | [🎵 MP3 44.1Khz](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms/psalm008.mp3) | [🖼 MP4 1920x1080](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms/psalm008.mp4) |
+| Score | [🎵 MP3 44.1Khz](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms+/psalm008.mp3) | [🖼 MP4 720x1280](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms+/psalm008.mp4) |
+| Cinematic | | [🖼 MP4 720x1280](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms+/cinematic/psalm008.mp4) |
+
+### Psalm 46
+
+| | Audio | Video |
+| --- | --- | --- |
+| Library | [🎵 MP3 44.1Khz](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms/psalm046.mp3) | [🖼 MP4 1920x1080](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms/psalm046.mp4) |
+| Score | [🎵 MP3 44.1Khz](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms+/psalm046.mp3) | [🖼 MP4 720x1280](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms+/psalm046.mp4) |
+| Cinematic | | [🖼 MP4 720x1280](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms+/cinematic/psalm046.mp4) |
+
+### Psalm 90
+
+| | Audio | Video |
+| --- | --- | --- |
+| Library | [🎵 MP3 44.1Khz](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms/psalm090.mp3) | [🖼 MP4 1920x1080](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms/psalm090.mp4) |
+| Score | [🎵 MP3 44.1Khz](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms+/psalm090.mp3) | [🖼 MP4 720x1280](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms+/psalm090.mp4) |
+| Cinematic | [🖼 MP4 720x1280](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms+/cinematic/psalm075.mp4) |
+
+---
+
+
+## Old Releases
 
 ### Psalm 32
 
@@ -30,10 +130,6 @@ Each chapter is set to a background song generated with **Suno**, accompanied by
 ### Psalm 44
 
 <a href="https://drive.google.com/file/d/1bPpi6ZjYJEttR_Y8VYrw0wfZUI16gKbj/view">Psalm 44<!-- <img src="img/psalm-044.png" width="120" alt="Psalm 44"> --></a> A Maskil by the Sons of Korah expressing deep national confusion. The community recalls ancient victories won not by the sword but by divine favor, and contrasts that glory with their current disgrace and defeat. Unusually, they claim innocence — insisting they have not betrayed the covenant — and issue a daring call for the Divine to awake from slumber and redeem them.
-
-### Psalm 46
-
-<a href="https://drive.google.com/file/d/1g3Sj7rbv1I9-zKYuFMrNjxY_tB9pY9fD/view">Psalm 46<!-- <img src="img/psalm-046.png" width="120" alt="Psalm 46"> --></a> A hymn of fearless trust by the Sons of Korah. Even if the physical world dissolves — mountains collapsing into the sea — there is a refuge that remains unshaken. The psalm contrasts global chaos with the serene river gladdening the city of the Divine, and depicts the end of all war through supreme power. It concludes with a call to be still and acknowledge His sovereignty.
 
 ### Psalm 47
 
@@ -91,10 +187,6 @@ Each chapter is set to a background song generated with **Suno**, accompanied by
 
 <a href="https://drive.google.com/file/d/1trlyfcNjI7N3NGGIjq93XoMLl_5kZ215/view">Psalm 70<!-- <img src="img/psalm-070.png" width="120" alt="Psalm 70"> --></a> A brief, urgent plea by David for immediate rescue — nearly identical to the close of Psalm 40. It focuses entirely on the speed of deliverance, asking for the shame of those who seek his harm and the joy of those who love salvation. The psalmist presents himself as poor and needy, and closes with a desperate appeal for the Divine not to delay.
 
-### Psalm 75
-
-<a href="https://drive.google.com/file/d/1VXk7aFH2IJef_vMnx3FwcOVYTwk4ZTQ5/view"><img src="img/psalm-075.png" width="120" alt="Psalm 75"></a> A prophetic song by Asaph balancing thanksgiving with a stern warning against human arrogance. It asserts that judgment belongs solely to God, who chooses the appointed time to act — lowering one and lifting another. The psalm uses the vivid image of a foaming cup of wine that the wicked must drink to the dregs, ending with the assurance that the horns of the proud will be cut off while the righteous are exalted.
-
 ### Psalm 84
 
 <a href="https://drive.google.com/file/d/1p4MXjtPpieCwNt7vaR7LyFqwZzH7CN32/view">Psalm 84<!-- <img src="img/psalm-084.png" width="120" alt="Psalm 84"> --></a> A lyrical expression of longing by the Sons of Korah for the beauty of the Divine dwelling place. The psalmist describes an intense soul-thirst to be near the sacred courts, envying even the birds that nest by the altars. It depicts the pilgrimage as a journey of transformation, where those passing through arid valleys find springs of strength. The psalm ends by valuing a single moment in the Divine presence above a lifetime elsewhere, celebrating the happiness of those who trust in the Source of all protection.
@@ -130,3 +222,39 @@ Each chapter is set to a background song generated with **Suno**, accompanied by
 ### Psalm 130
 
 <a href="https://drive.google.com/file/d/1s-ZEz7Pvp2Bx16HBj2Nzo9BpaeEkLP6k/view"><img src="img/psalm-130.png" width="120" alt="Psalm 130"></a> A profound song of ascent journeying from the lightless depths of despair to the certain hope of dawn. It begins with a raw cry for mercy, acknowledging that if God kept a strict record of sins, no human could stand. The heart of the psalm is the transformative power of forgiveness, which fosters true reverence. The psalmist describes a state of intense, patient waiting — more eager than watchmen longing for morning — and closes with a communal call for Israel to hope in the LORD, whose redemption is as plentiful as His love is steadfast.
+
+## Old Videos
+
+### Psalm 2
+
+### Psalm 3
+
+### Psalm 4
+
+### Psalm 5
+
+### Psalm 6
+
+### Psalm 7
+
+### Psalm 10
+
+### Psalm 12
+
+### Psalm 15
+
+### Psalm 17
+
+### Psalm 19
+
+### Psalm 20
+
+### Psalm 22
+
+### Psalm 23
+
+### Psalm 26
+
+### Psalm 30
+
+### Psalm 43

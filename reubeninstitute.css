@@ -58,7 +58,7 @@
 	font-style: normal;
 	font-weight: 400;
 	font-display: block;
-	src: url('fa-brands-400.woff2') format('woff2');
+	src: url('fonts/fa-brands-400.woff2') format('woff2');
 }
 
 
@@ -262,9 +262,12 @@ h1 {
 }
 
 
-h1, h2, h3, h4 {
+h2, h3, h4 {
 	color: var(--subheading);
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
+
 
 a {
 	color: var(--link);
@@ -357,16 +360,6 @@ th:last-child {
 
 .content hr {
 	margin: 2rem 0;
-}
-
-.content h2 {
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-}
-
-.content h3 {
-	margin-top: 1rem;
-	margin-bottom: 1rem;
 }
 
 .content p {
