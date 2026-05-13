@@ -22,6 +22,7 @@
 	--number-bg: #b06d25;
 	--nav: #e8e0d4;
 	--caption: #8f7a66;
+	--hr: #cccccc;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -49,6 +50,7 @@
 	--number-bg: #f5a742;
 	--nav: #2a251f;
 	--caption: #a89884;
+	--hr: #cccccc;
 	}
 }
 
@@ -254,6 +256,8 @@
 body {
 	background-color: var(--background);
 	color: var(--text);
+	padding: 1rem;
+	font-family: text;
 }
 
 
@@ -351,20 +355,15 @@ th:last-child {
 
 
 .content {
-	padding: 1rem;
-	font-family: ptserif;
-	font-family: ubuntu;
-	xline-height: 1.6;
-	font-family: text;
 }
 
-.content hr {
-	margin: 2rem 0;
-}
-
-.content p {
+hr {
+	border-color: var(--hr);
 	margin: 1rem 0;
-	xline-height: 1.6;
+}
+
+p {
+	margin: 1rem 0;
 }
 
 p img {
