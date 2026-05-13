@@ -11,7 +11,11 @@ produce meticulously curated content across **print**, **digital**, **audio**, a
 By combining rigorous academic standards with modern technology, the Institute ensures that
 historical traditions remain accessible and accurate for contemporary audiences.
 
-Meet our [Team](admin/Team.md) and see who are we [Following](admin/Following.md).
+## Dev Lab
+
+The Institute builds in the open— every breakthrough, false start, and late‑night refactor— is public, updated session by session. It's not a polished report; it's the raw, honest chronicle of how we work, warts and all. No commercial secrets, nothing hidden— just a transparent, running record of what we're building and why.
+
+Meet our [Team](Team.md), see our full [Dev Log](log/log.md), and see who are we [Following](Following.md).
 
 ---
 
@@ -117,13 +121,11 @@ Behind every video, app, and booklet sits a set of internal standards — how th
 
 ### [Reading Cycles](ReadingCycles.md)
 
-### [Punctuation](admin/Punctuation.md)
+### [Typography](Typography.md)
 
-### [Typography](admin/Typography.md)
+### [Style](Style.md)
 
-### [Translation](admin/Translation.md)
-
-### [Code](admin/Code.md)
+### [Code](Code.md)
 
 ---
 
@@ -150,10 +152,6 @@ A suite of free software code packages released by the Institute, each one solvi
 ### [Sensors](libs/Sensors.md)
 
 ---
-
-## Dev Lab
-
-The Institute builds in the open. Our full [Dev Log](log/log.md)— every breakthrough, false start, and late‑night refactor— is public, updated session by session. It's not a polished report; it's the raw, honest chronicle of how we work, warts and all. No commercial secrets, nothing hidden— just a transparent, running record of what we're building and why.
 
 ## Meh
 

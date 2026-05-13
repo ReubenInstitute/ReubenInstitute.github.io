@@ -16,8 +16,9 @@ Each chapter is set to a background song generated with **Suno**, accompanied by
 
 David looks at the night sky and marvels that the God who created such vastness pays any attention to human beings at all. He reflects on the surprising status God has given humans — made just below divine beings and entrusted with dominion over all the earth: sheep, cattle, birds, and fish. The psalm opens and closes with the same declaration: God's name is majestic everywhere. 
 
-<video preload="none" controls="controls" height="200" width="356" poster="https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms/covers/horizontal/psalm008.jpg">
-	<source src="https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms+/horizontal/psalm008.mp4">
+<video preload="none" controls="controls" height="200" width="356"
+	poster="https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms/covers/horizontal/psalm008.jpg">
+	<source src="https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms+/horizontal/psalm008.mp4" />
 </video>
 
 ### Psalm 46
@@ -27,8 +28,8 @@ David looks at the night sky and marvels that the God who created such vastness 
 A hymn of fearless trust by the Sons of Korah. Even if the physical world dissolves — mountains collapsing into the sea — there is a refuge that remains unshaken. The psalm contrasts global chaos with the serene river gladdening the city of the Divine, and depicts the end of all war through supreme power. It concludes with a call to be still and acknowledge His sovereignty.
 
 <video preload="none" controls height="200" width="356"
-  poster="https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms/covers/horizontal/psalm046.jpg">
-  <source src="https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms+/horizontal/psalm046.mp4"></source>
+	poster="https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms/covers/horizontal/psalm046.jpg">
+	<source src="https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms+/horizontal/psalm046.mp4" />
 </video>
 
 ### Psalm 75
@@ -38,8 +39,8 @@ A hymn of fearless trust by the Sons of Korah. Even if the physical world dissol
 A prophetic song by Asaph balancing thanksgiving with a stern warning against human arrogance. It asserts that judgment belongs solely to God, who chooses the appointed time to act — lowering one and lifting another. The psalm uses the vivid image of a foaming cup of wine that the wicked must drink to the dregs, ending with the assurance that the horns of the proud will be cut off while the righteous are exalted.
 
 <video preload="none" controls height="200" width="356"
-  poster="https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms/covers/horizontal/psalm075.jpg">
-  <source src="https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms+/horizontal/psalm075.mp4"></source>
+	poster="https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms/covers/horizontal/psalm075.jpg">
+	<source src="https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms+/horizontal/psalm075.mp4" />
 </video>
 
 ### 150 Day Psalm Cycle
@@ -102,12 +103,12 @@ The 150 Day Psalm Cycle publishes one psalm per day, drawn round‑robin from th
 | Score | [🎵 MP3 44.1Khz](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms+/psalm046.mp3) | [🖼 MP4 720x1280](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms+/psalm046.mp4) |
 | Cinematic | | [🖼 MP4 720x1280](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms+/cinematic/psalm046.mp4) |
 
-### Psalm 90
+### Psalm 75
 
 | | Audio | Video |
 | --- | --- | --- |
-| Library | [🎵 MP3 44.1Khz](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms/psalm090.mp3) | [🖼 MP4 1920x1080](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms/psalm090.mp4) |
-| Score | [🎵 MP3 44.1Khz](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms+/psalm090.mp3) | [🖼 MP4 720x1280](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms+/psalm090.mp4) |
+| Library | [🎵 MP3 44.1Khz](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms/psalm075.mp3) | [🖼 MP4 1920x1080](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms/psalm090.mp4) |
+| Score | [🎵 MP3 44.1Khz](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms+/psalm075.mp3) | [🖼 MP4 720x1280](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms+/psalm090.mp4) |
 | Cinematic | [🖼 MP4 720x1280](https://raw.githubusercontent.com/ReubenInstitute/Media/main/psalms+/cinematic/psalm075.mp4) |
 
 ---
