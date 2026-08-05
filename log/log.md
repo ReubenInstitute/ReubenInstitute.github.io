@@ -1,4 +1,45 @@
-# Log
+# Dev Lab
+
+## Glossary
+
+* **Chainsaw massacre** — complete ground-up refactor, nothing sacred, everything gets cut and rebuilt correctly from scratch
+* **MOAB** (Mother of All Bombs) — when the chainsaw isn't enough, we switch languages or platforms entirely and rebuild from zero; nuclear option
+* **Labeled scar** — a workaround for a missing feature or quirk of a language, platform, or tool; isolated and explicitly named so the clean design remains visible next to it, never hidden inside it
+
+## Guidelines
+
+### Code
+
+* Use **tabs** for indentation, never spaces.
+* Do **not** use extra spaces inside code to visually align values — alignment is the job of indentation, not spacing.
+* **No comments or docstrings** — the code must be self‑documenting through clear naming.
+* **Blank lines** separate different blocks of code (imports, defines, functions, classes). They are **not** used inside a block to visually break up logic — that belongs in the viewer, not the source.
+* Keep `if` statements on separate lines with proper indentation; never cram them onto a single line.
+* Outside Python, single‑line `if` bodies are written without surrounding braces — the line break alone ends the block.
+* Variable names are **full words** (`controller`, `player`, `eventHandler`), **no abbreviations**.
+* Single letter variables are acceptable for very short‑lived (a few lines) or obvious temporary variables (`n`, `s`, `e`), but avoid mixing many of them.
+* "Know the rules well, so you can break them effectively."
+
+### Markdown
+
+* Use asterisk for bulletpoint character
+* Use proper markdown headers (`#`, `##`)
+
+### Log
+
+#### Full entry
+
+* Narrative tone, diary-like
+* First person plural ("we") for decisions and actions; passive voice for the code, system, or hardware itself
+* Chronological order within the session — the sequence of decisions matters
+* Log everything including abandoned work — the fact that something was tried and dropped is as important as what was kept
+* The human experience is part of the record — frustration, dead ends, moments of madness, not sanitized away
+* Language exemption — profanity and slang permitted when it reflects the real emotional register of the session
+
+#### Index entry
+
+* Every detail from the full entry, nothing omitted — not a summary
+* No narration, no connective tissue, no unnecessary words — lossless compression, not lossy summarization
 
 ## Tags
 
@@ -22,6 +63,61 @@
 * **General** – meta‑discussions, workflow, project management, and any topic not yet covered by another label.
 
 ## Sessions
+
+#### [4 Aug 2026 – DeepSeek 3 Expert – Massive refactoring: Zman, HalakhicBand, DayNightBand, SeasonalHour, ring consolidation](20260804.md)
+
+Reviewed Institute progress; confirmed timezone hack scoped to `Clock.py`, second‑hand bug fixed.  Designed DayNightRing: renamed `RING_RADIUS`→`HALAKHIC_RING_RADIUS`, added `DAY_NIGHT_RING_RADIUS=70`; created `DayNightBand` enum (NIGHTFALL, WATCH_1_3…WATCH_4_4, DAWN, MORNING, AFTERNOON); added `dayNightBands` property to `LocalHebrewDate` supporting 3/4 watches and GRA/MA twilights; added name functions.  Renamed `EventId`→`Zman` (1‑16, includes MOONRISE/MOONSET), `BandId`→`HalakhicBand` (1‑8); flipped `Event` constructor to `datetime` first with optional `zman`; renamed `Band.id`→`band`, moved to end after `color`; renamed all name functions; rejected `.name` in repr.  Extracted halakhic color constants (`NIGHTFALL_COLOR`, `DAWN_COLOR`, `MISHEYAKIR_COLOR`, `SHEMA_COLOR`, `AMIDAH_COLOR`, `MINCHA_COLOR`, `MINCHA_KETANA_COLOR`, `PLAG_MINCHA_COLOR`) and day‑night constants (`WATCH_1_3_COLOR`…`WATCH_4_4_COLOR`, `MORNING_COLOR`, `AFTERNOON_COLOR`).  Updated `Custom` with `watches` field (default 3).  Rewired `Clock.py`: renamed tick length constants, added ring radii, `StandardClock` gained `dayNightBands`/`visualDayNightBands`/`drawDayNightBands`, reordered drawing (DayNight ring, Halakhic ring with track, marks, hands, face); `HebrewClock` added medium ticks; split drawing into `drawDayNightBands`, `drawHalakhicBands`, `drawMarks`, `drawHands`, `drawFace`.  Defined `SeasonalHour` enum (HOUR_1…HOUR_12, HOUR_[h]_[watch]_[total] for 3/4 watches, 36 members); added alternating label colour constants (`DAY_LABEL`, `DAY_LIGHT_LABEL`, `WATCH_1_3_LABEL`…); added `seasonalHourNameEN/HE` and full‑name functions; stationary ring on Hebrew clock, civil version deferred.
+
+#### [3 Aug 2026 – Claude Sonnet 5 – Second‑hand bug, timezone seam, and the civil clock’s cream ring](20260803.md)
+
+Fixed Hebrew clock second‑hand overlap: isolated progress through current seasonal *minute* via `hourFrac * 60 % 1.0`, sweeping once per seasonal minute with automatic day/night speed variation.  Reordered draw sequence: bands → ticks → hands/cap/rim.  Diagnosed civil‑clock band misplacement: UTC zmanim compared directly to local IDT now, causing ~3 h shift; added `_STANDARD_CLOCK_DISPLAY_OFFSET_SECONDS = 3 * 3600` in `StandardClock`, applied only at band comparison/plotting, leaving `Sun.py` and all other modules untouched.  Fixed seam bug: visual band angles (±360°) were folded by modulo 360, causing ghost bands; clipped to ±180° visible window with antipodal gap, removed modulo.  Widened seam gap from 4° to 30° (5 minutes on standard face).  Added cream base ring (`RING_TRACK_COLOR = 0xE8DFC8`) across visible window excluding seam, so silent zman gaps read as ring rather than page background.  Only `Clock.py` modified; all other files unchanged.
+
+#### [2 Aug 2026 – Claude Sonnet 5 – Python clock classes, display engine, and the second‑hand standoff](20260802c.md)
+
+Introduced `DateTimeSpan(ordinal, serial)` as pure container; `DateTime.__sub__` returns `DateTimeSpan`, elapsed seconds computed via `Time` overflow, no 86400.  Added `DateTime` comparison operators.  Renamed `ZmanId`→`EventId`, `Zman`→`Event`; created `LocalHebrewDateTime` container; `Event` holds civil `DateTime` and `LocalHebrewDateTime`; `events` property builds list from yemama; `bands` produces eight `Band` objects with `BandId` enum.  Added `angle(hour)` method using only `dayLength`/`nightLength`, noon=0°.  Added “Local” preset to `Custom.py`.  Built `StandardClock` (±12h window, bands filtered by civil `DateTime` comparisons, visualBands at 1°/120s) and `HebrewClock` (window from previous Hebrew date to next Hebrew date, bands filtered by `(ordinal, hour)` tuples, visualBands via `yemama.angle()`).  Ported C++ `Display` to Python: `bytearray` buffer, `fill`, `drawLine`, `drawArc`, `drawCircle`, `save` (PIL PNG).  Adapted C++ clock drawing: cream background, ticks, hands, cap, rim.  Settled drawing constants after repeated mis‑classification: `DIAL_RADIUS=100`, `RING_RADIUS=80`, `RING_THICKNESS=4`, `HOUR_TICK_SHORT_LENGTH=16`, `HOUR_TICK_LONG_LENGTH=32`, `CAP_RADIUS=3`, `RIM_THICKNESS=2`, hand lengths; `STANDARD_`/`HEBREW_` prefixes for differing values only.  Fixed Hebrew clock arc mirroring: `pil_start = a-90, pil_end = b-90`.  Encountered second‑hand bug: hour hand and second hand mathematically identical (both derived from same continuous seasonal hour); AI misdiagnosed repeatedly, user ended session and transferred leadership to Claude.
+
+#### [2 Aug 2026 – Claude Sonnet 5 – Python port: Astro, Geo, Sun, Moon, Custom, and LocalHebrewDate](20260802b.md)
+
+Added `CelestialLocation` to `Astro.py`.  Ported full `Place` class from `Place.js` to `Geo.py` (~90 static instances with `isDiaspora`, `fromCoordinates`, `closest`, `all`).  Extended `Date.py` with `DateTime` class: `julianDay`/`fromJulianDay` using `ordinal` offset by 0.5 (no astro imports), `__sub__` returning `DateTimeSpan(ordinal, serial)`, `__add__` adding seconds via `Time` overflow.  Translated `Sun.js` to `Sun.py`: mutable constructor, `dawnTime`/`duskTime`, all Meeus solar math verbatim.  Translated `Moon.py` (moonrise/set, illumination, phase) and `MoonPhaseNames.py` (emoji and names).  Translated `Custom.py` with four enums and nine preset constants (Ashkenazi GRA, Sephardi, Chabad, Magen Avraham, Rabbeinu Tam variants, Ben Ish Chai, Western European).  Translated `LocalHebrewDate.py` from C++: added `HebrewDate.civilDate` property and `DateTime` arithmetic; de‑duplicated nightfall logic into `_nightfallFor()` helper; all zmanim computed as properties.  Reinforced rule: `Date.py` stays pure calendrical, all JD arithmetic derived from `ordinal`/`serial`, `86400` only for civil‑day container.  Python library complete, behaviour matches JS and C++.
+
+
+#### [2 Aug 2026 – Claude Sonnet 5 – Python port: Date, Time, HebrewDate, and HebrewHoliday with bugs fixed
+
+Renamed `cjd` → `ordinal` throughout `Date.py`; converted `Date(int cjd)` constructor to `fromordinal` classmethod; added `__add__`/`__sub__` (int days), `next()`/`prev()` as one‑liners.  Fixed `numDaysInMonth` bare‑name bug (`FEBRUARY` → `GregorianMonth.FEBRUARY`).  Added `Time` class with `serial` field, `fromserial`, and `__add__` (wrapping via `% 86400`).  Created `HebrewMonth` IntEnum (Nisan=1, Adar II=13) in `HebrewDate.py`; dropped `civilDate`, stored `ordinal` directly; wrote `fromordinal`, `fromdate`, inlined `weekday()`, replaced all magic numbers with enum members; converted month names to arrays, removed bogus `isLeapYear` check for Cheshvan/Marcheshvan.  Translated `HebrewHoliday.js` to `HebrewHoliday.py` with `HebrewHolidayId` IntEnum; used `HebrewMonth` and `Weekday` enums throughout; simplified `monthEsther` using `numMonthInYear`.  Fixed three pre‑existing bugs: dead `weekday() === 0` checks changed to `Weekday.SUNDAY` (Yom HaShoah, Yom HaZikaron); copy‑paste error in Yom HaAtzmaut (was checking `yomHazikaron.weekday()`); Yom Kippur off‑by‑one (`day == 9` → `day == 10`).  Verified all holidays against known dates.  Added calendar‑print test blocks to `Date.py` and `HebrewDate.py`.  Three files clean; astronomy modules pending.
+
+#### [1 Aug 2026 – DeepSeek 3 Expert – Manual image generation, SVG script, and the decision to port the core classes to Python](20260801.md)
+
+Specified academic dial orientation: midnight bottom, midday top, sunrise left, sunset right, night arc lower half.  Generated summer/winter dial SVGs showing hands at end of Shema (3rd seasonal hour) with Hebrew hour labels rotated radially (night labels +180°).  Produced night‑watch images (3‑ and 4‑watch) as standalone grey wedges with labels; halakhic ring images with all eight bands as annular segments, corrected Dawn/Nightfall widths using night‑length conversion, shifted colour scheme (new Amidah light blue `#b0c4de`); moon ring image for Jerusalem 20 Jun 2026 with amber arc `#d4a017` and phase‑emoji legend.  Built `images.py` script using `math`, `jinja2`, `os` with SVG helper functions and two Jinja2 templates; output to `.svg` files and `svgs.md`.  Identified hardcoded‑angle problem: all angles faked (constant daylight lengths, baked dawn/nightfall minutes, fixed moon date), manual images not driven by real zmanim.  Decided to port full calendar/astronomy classes (`Date`, `Time`, `DateTime`, `HebrewDate`, `Sun`, `Moon`, `Custom`, `LocalHebrewDate`) from C++ to Python so image generator could compute dial from actual dates, locations, and customs.  Existing images marked provisional; manual’s Display section labelled “fake — pending Python port.”
+
+#### [30 Jul 2026 – DeepSeek 3 Expert – Hardware deep‑dive, display buffer, and C++ clock rendering](20260730b.md)
+
+Selected MCU architecture: rejected STM32WB55 (no parallel LCD), evaluated ESP32‑S3 (parallel but Wi‑Fi liability), chose STM32F4/F7 with FSMC + external BLE (nRF52840) for production; prototype to use 4″ ILI9486 parallel TFT with `Place.MERON` hardcoded.  Formalised Shabbat Lock hardware behaviour: no power button, boot detection of Shabbat via RTC, brief GPS‑for‑time if RTC zero then lock with display on but non‑interactive, location frozen at Shabbat entry.  Implemented `Display` class with public `uint8_t buffer[WIDTH*HEIGHT*3]` (240×240), distance‑field antialiased `drawLine`, `drawArc`, `drawCircle`, and `fill`.  Built `Clock` class for civil dial: cream background, minute/hour ticks, three hands, rim, angles matching JS exactly; test output `civil_clock.png` pixel‑perfect.  Built `HebrewClock` class using JS angle formulas verbatim: night `180 - nightArc/2 + (h/12)*nightArc`, day `-dayArc/2 + ((h-12)/12)*dayArc`, drawing via `sin`/`cos`; night background grey arc, 24 ticks, hour and second hands.  Struggled with multiple incorrect angle offsets until literal translation enforced; final output matched JS dial.  Extended Makefile with `test` target linking `Display`, `Clock`, and calendar objects; used `stb_image_write.h` for PNG export.  Strict minimalism enforced: no added methods, no STL, no getters, public buffer.
+
+#### [30 Jul 2026 – DeepSeek 3 Expert – C++ translation of the calendar library (strict port)](20260730.md)
+
+Translated entire JS calendar library to C++ with plain OOP, no STL, no dynamic allocation, no `new`, no initialiser lists, and `86400` confined to `Time` constructor’s `fmod` wrap and `DateTime` subtraction.  Added `cjd` and `jd` fields to `Date`; removed `epochDays()`, `julianDay()`, `fromJulianDay()`, `add()`, `subtract()`.  Implemented `Date` constructors from y/m/d and from `cjd`; used `serial + EPOCH` (1721425) for CJD.  Created `Time` with wrapping constructor from total seconds; `DateTime` with arithmetic and overflow detection via hour comparison (no division).  Translated `HebrewDate` with `EPOCH = 347996`, kept `civilDate` member.  Translated `HebrewHoliday`, `Location`, `Geo`, `Astro`, `Sun` (mutable, `dawnTime`/`duskTime`), `Moon` (pointers to private members, `NAN` for null), `Custom` (enum classes, preset table), and `LocalHebrewDate` (all zmanim, `hour(Time)` using `DateTime` subtraction, no `86400`).  Added `extern "C"` name functions.  Wrote `Makefile` and test app printing civil and Hebrew calendars.  Fixed `weekday()`, `Calendar` grid initialisation, and removed accidental extra variables and methods.  Library self‑contained, compiles, matches JS behaviour exactly.
+
+#### [28 Jul 2026 – DeepSeek 3 Expert – Physical product design, Shabbat Lock, and manual outline](20260728.md)
+
+Defined four core clock form factors (Wall 20×20 cm, Desktop 13×13 cm, Bedside 9×9 cm, Travel 6×6 cm) plus Wristwatch, Info Panel, and HDMI sticks, with TFT/LCD/OLED/e‑paper displays.  Specified universal hardware: USB‑C (power, charge, firmware), user‑supplied 18650 backup batteries, GPS (manual trigger only), BLE (no Wi‑Fi), encoder + back button, RTC, buzzer.  Established two‑level settings menu (rotate to browse, press to commit, back to cancel) and sleep/wake behaviour.  Designed mandatory Shabbat Lock: disables inputs and GPS, prevents sleep, freezes location at Shabbat entry; first‑ever power‑on during Shabbat triggers brief GPS to set RTC then immediately locks.  Created two market versions (Strict/Standard) with internal `STRICT_MODE` flag.  Set naming convention: Hebrew Clock [Form Factor] ([display]), e.g., Hebrew Clock Travel (e‑paper).  Outlined user manual sections: physical description, scholarly primer on Hebrew day/zmanim/customs, and clock operation.  Documented academic dial visual specification: midnight up, midday down, sunrise left, sunset right; major/minor/half‑hour marks; Ring 1 halachic band colours (Misheyakir `#3a5a7c`, Shema `#6b8a9e`, Amidah `#a3b8c5`, Mincha Gedolah `#7a8c6d`, Mincha Ketanah `#cbb88c`, Plag Minchah `#b08a5c`); night watches in 3‑ and 4‑watch grey schemes; Ring 2 special days (solid muted red Shabbat/Yom Tov, diagonal stripes for fasts, vertical stripes for periods); Ring 3 moon arc `#d4a017`.  Reaffirmed UPS‑only battery philosophy, BLE‑only connectivity, and make‑to‑order blueprint approach.
+
+#### [27 Jul 2026 – DeepSeek 3 Expert – Yemama abstraction, off‑by‑one fix, and nightfall computation](20260727.md)
+
+Diagnosed off‑by‑one night‑arc bug caused by original `HebrewDay` calculating night from `dayEnd` to `nextDayStart` instead of previous evening to current evening.  Created `previousYemama`/`nextYemama` accessors via `HebrewDate.previousDay`/`nextDay` to navigate by Hebrew date, not civil day.  Renamed class to `Yemama` with precise vocabulary: `yemamaStart` (D‑1), `dayStart` (D), `yemamaEnd` (D); `dayLength` and `nightLength` derived from these.  Solved nightfall getter circularity for MA by using astronomical `daylightLength` instead of halachic `dayLength`; single switch block with local `sunRef`/`refDayLength` selection for GRA vs MA.  Corrected `hour` getter to use halachic boundaries (day/night/next‑night branches).  Removed old `Day`, `DayTime`, `HebrewDay`, `HebrewDayTime` classes; `Yemama` became single source of truth.  Updated `HebrewClock.js` to accept `Yemama` directly, simplified `clock.html` imports.  Validated with GRA and MA tables confirming all zmanim on correct civil dates and nightfall positions.  Architecture clean, off‑by‑one bug dead.
+
+
+#### [26 Jul 2026 – DeepSeek 3 Expert – Preset selector, live animation, and ring architecture for the Hebrew Clock](20260726.md)
+
+Refactored `Custom.js` with static preset constants and a `setCustom()` method; added nine preset buttons, individual dawn/nightfall/misheyakir selectors, and a GRA/MA toggle to the test page, updating the live clock and zmanim table on every change.  Rewrote `clock.html` with a continuous `requestAnimationFrame` loop that recomputes a fresh `Yemama` from civil time, driving both clock faces in real time.  Introduced `Band` class (start fraction, end fraction, colour) and Ring concept to decouple halachic band layout from rendering.  Defined the signatures and strict constraints for `civilWindowFraction(start, civilTime)` and `hebrewWindowFraction(startHour, eventHour)` — the window‑fraction functions that would map absolute halachic bands onto a 12‑hour moving civil‑clock window, using only existing time‑wrapping logic and no domain mixing; implementation remained pending.
+
+#### [25 Jul 2026 – DeepSeek 3 Expert – Clock face visual design, halachic bands, night watches, moon arc, and the civil‑clock concept](20260725.md)
+
+Polished standard clock face with lengthened cardinal ticks (16 px, `:nth‑child(3n+1)`); fixed Hebrew clock tick alignment by generating ticks at hour starts so `:nth‑child(3n+1)` reached sunset/sunrise/midnight/noon, colored sunrise tick black; added half‑hour marks (10 px SVG strings, grey day/light‑grey night).  Removed Hebrew clock minute hand, lengthened hour hand to 80 px, shortened second hand to 40 px total sweeping once per seasonal minute; moved all drawing to pure SVG via dictionary assembly in `Clock.js`.  Added halachic bands as stroked arcs (stroke‑dasharray/offset): morning blues (misheyakir→sunrise→3h→4h), midday gap, afternoon greens/ambers (Mincha Gedolah, Mincha Ketana pre‑/post‑Pelag).  Divided night arc into 3/4 ashmorot as filled grey pie wedges with toggle setting.  Added moon arc (thin amber, moonrise→moonset, seasonal hours).  Conceived civil‑clock overlay: 720° ring of bands, 360° visible window centred on hour hand with antipodal gap, sliding dynamically; designated as product default.  Set poster slogan and Hebrew variant, reaffirmed “Hebrew” naming.  Extracted `DawnCustom` (7 values), `MisheyakirCustom` (5), `NightfallCustom` (12) enums with DEG/MIN/REL prefixes into `Custom.js`, documented attributions, removed duplicates.  Refactored `Sun` class mutable: constructor takes location/date, `setLocation`/`setDate`/`update`, added `dawnTime`/`duskTime` using stored state.  Removed `DaySpan`; introduced `DateSpan` (int days) and `TimeSpan` (seconds); `DateTime.add` handles both, overflow detected by hour comparison, no `86400` outside `Time`’s internal wrap.  Designed `HebrewDay` class (pre‑computes zmanim from `DateTime`, `Location`, `Custom`, inline enum checks required; first implementation with lookup tables rejected); planned `HebrewDayTime` wrapper.  Added `omerCount`, `isNewMoonSanctificationDay`, `isSunBlessingDay`, and period detectors to `HebrewHoliday.js`.  Deferred `HebrewDay` inline rewrite, `HebrewDayTime` implementation, and civil‑clock band overlay.
+
+#### [24 Jul 2026 – DeepSeek 3 Expert – Java calendar library ported to JavaScript, live demo page built](20260724.md)
+
+Ported the Institute’s Android Java calendar/clock library to self‑contained ES6 modules (`Date.js`, `HebrewDate.js`, `Sun.js`, `Moon.js`, `HebrewHoliday.js`, `TorahPortion.js`, `TorahSchedule.js`, etc.) with Handlebars as sole external dependency.  Built a single `index.html` live demo rendering a standard 12‑hour civil clock and a 24‑hour seasonal Hebrew clock side by side, plus full Gregorian and Hebrew monthly calendars (Hebrew date numerals, holiday names, Torah column), sunrise/sunset, moonrise/moonset, and upcoming Shabbat portion.  Established a continuous epoch‑day integer shared by `Date` and `HebrewDate` for conversion and arithmetic; HebrewTime as a float 0–24 (0 = sunset, 12 = sunrise) with display logic converting to 1‑based per‑period hours.  Fixed missing `DaySpan` and `HebrewDateTime` exports, missing `Date.today` import, tick centering (added `translate(0,‑110px)` to CSS transform using `--angle`), duplicate tick overlap from Handlebars `{{#each}}` loops (removed loops, ticks generated only by JS), day/night arc angles (changed from `i/D` and `i/N` to `i/12` per arc), and night‑tick colour scoping (added wrapper `<div class="clock-ticks">` for `nth‑child(n+13)`).  Library fully self‑contained, demo operational, ready for GitHub Pages deployment.
+
 
 #### [19 Jul 2026 – DeepSeek 3 – Psalm series restarted, two‑week buffer built, Tikun Haklali integrated, export automated, pipeline self‑sustaining](20260719.md)
 

@@ -2,13 +2,14 @@
 
 ​We are a hybrid human‑AI collaborative studio. We operate by initializing every session with the current state of our project documents and code. Our progress is defined by reaching stability through rapid, uninhibited refinement. When the work is done, it is logged and saved; until then, everything is on the table for any member to fix or improve.
 
-* **Human** – Founder, Director, Lead Developer, Human Lead, and main bug producer – `human-beta-0.0`
-* **DeepSeek 3** – `deepseek-v3.2`
-* **Gemini 3 Pro** – `gemini-3-pro`
-* **Gemini 3 Flash** – `gemini-3-flash-preview`
-* **Claude Sonnet 4.6** – `claude-sonnet-4-6`
-* **[temp] GPT 5.4 mini** – `gpt-5.4-mini`
-* **[temp] Grok 4.1 Fast** – `grok-4-1-fast-reasoning`
+* **Human** – Founder, Director, Lead Developer, Human Lead, and main bug producer
+* **DeepSeek 3**
+* **Gemini 3**
+* **Claude Sonnet 5**
+* **Kimi 2.6**
+* **Qwen 3.8 Max**
+* **Grok 4.5**
+* **GPT 5.5**
 
 ### Workflow
 
