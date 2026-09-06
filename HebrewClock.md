@@ -1,36 +1,71 @@
 # GPS Hebrew Clock
 
-A clock that displays both Gregorian and Hebrew dates using an Arduino board, a GPS module, and a LED screen. The time is automatically adjusted using real-time data from the GPS module. The software calculates all official Hebrew holidays, fasts, and Israeli national hoslidays.
+Read the [Manual](HebrewClockManual.md)
 
-### Wall/Desktop
+A timepiece that tells the hour the ancient way—dividing daylight and darkness into twelve proportional parts, shifting with the seasons. The Hebrew Clock presents the full seasonal day on a single dial: the halakhic bands, night watches, moon arc, and observance ring all remain complete at every size. 
 
-| Size | Display | Resolution |
-|---|---|---|
-|  | LED Panel | 256x64 |
-| 4-7 inch | LCD | 320x240 |
-| 4-7 inch | E-Paper | 320x240 |
+Four distinct form factors cover every setting, from pocket to wall. Each size is available with a choice of display technology—LCD for bright indoor use, OLED for dark rooms, or e‑paper for sunlight and low power—alongside backup battery options ranging from a single removable cell to multiple user‑supplied 18650 cells.
 
-### Mobile
 
-| Size | Display | Resolution |
-|---|---|---|
-| 4 inch | LCD | 320x240 |
-| 4 inch | E-Paper | 320x240 |
+| name | size | battery | lcd | oled | e‑paper |
+|------|------|---------|-----|------|---------|
+| Travel | 6 × 6| | HCT-L | HCT-O | HCT-E |
+| Travel | 6 × 6 | BL-5C | HCT-L/N | HCT-O/N | HCT-E/N |
+| Travel | 6 × 6 | 1 x 18650 | HCT-L/C | HCT-O/C | HCT-E/C |
+| Bedside | 9 × 9 | | HCB-L | HCB-O | HCB-E |
+| Bedside | 9 × 9 | BL-5C | HCB-L/N |  | HCB-E/N |
+| Bedside | 9 × 9 | 2 x 18650 | HCB-L/C | HCB-O/C | HCB-E/C |
+| Desktop | 13 × 13 | | HCD-L | HCD-O | HCD-E |
+| Desktop | 13 × 13 | 4 x 18650 | HCD-L/C | HCD-O/C | HCD-E/C |
+| Wall | 20 × 20 | | HCW-L | HCW-O | HCW-E |
+| Wall | 20 × 20 | 4 x 18650 | HCW-L/C | HCW-O/C | HCW-E/C |
 
-### Wearable
+## Hebrew Travel Clock (6 × 6 cm)
 
-| Size | Display | Resolution |
-|---|---|---|
-| 1 inch | OLED | 240x240 |
+Compact and portable. The Travel edition carries the full Hebrew Clock in a size that fits a pocket, bag, or siddur pouch. Its display and battery combinations are kept light and simple, making it the natural choice for maintaining the day’s structure on the go.
 
-## Components
+## Hebrew Bedside Clock (9 × 9 cm)
+
+Quiet and personal. Sized for the nightstand, the Bedside edition keeps every ring and marking legible from the pillow. It preserves the full instrument without brightness or distraction, utilizing battery options chosen for long, uninterrupted use through the night.
+
+## Hebrew Desktop Clock (13 × 13 cm)
+
+Balanced and versatile. Designed for a desk, shelf, or study table, the Desktop edition keeps the sacred rhythm of the day within sight while working, learning, or writing. The dial remains fully detailed at a scale suited for a personal workspace.
+
+## Hebrew Wall Clock (20 × 20 cm)
+
+Commanding and communal. The Wall edition presents the full dial in generous proportions, clearly legible from across a room. It is designed for synagogues, batei midrash, community spaces, or a prominent home wall where the instrument can be read by many.
+
+# Coming soon
+
+## Hebrew Calendar & Clock Info Panel (15-inch)
+
+A fixed, self-contained display for public and shared spaces, including synagogues, batei midrash, and community buildings. The integrated 15‑inch screen presents zmanim across multiple customs side by side. All hardware and software are built into a single, plug-and-play unit.
+
+## Hebrew Calendar & Clock Info HDMI Stick
+
+A compact, self-contained solution for locations already equipped with a large screen or television. The stick plugs directly into an HDMI port to present zmanim across multiple customs side by side. All software and display processing are built directly into the stick, requiring no additional hardware.
+
+## Hebrew Wristwatch
+
+Personal and immediate. A standalone wearable clock with an integrated battery, bringing the same seasonal hour, zmanim, and observance awareness to the most intimate format.
+
+## Hebrew Calendar & Clock for Mobile
+
+A fully featured, free utility. The Hebrew Calendar app for Android and iOS is complete on its own, offering comprehensive daily tracking. An optional Pro tier enables the animated clock display, accessible via direct purchase or by completing a designated activity.
+
+## Hebrew Calendar & Clock for Wearable
+
+Designed for the wrist. The Hebrew Calendar & Clock app operates as a dedicated watch face for WearOS and watchOS smartwatches, bringing the complete seasonal dial and zmanim to existing wearable devices.
+
+## Specs
 
 | Name | Model | Description |
 |---|---|---|
-| **MCU** | STM32F405 | A high-performance microcontroller with an ARM Cortex-M4 core, handling all clock calculations, display updates, and sensor data processing. |
-| **Temperature, Humidity, & Pressure Sensor** | BME280 | Measures ambient temperature, barometric pressure, and humidity, used for weather-related features. |
-| RTC | DS3231 | Maintains accurate timekeeping even when the main power is off (using a backup battery). |
-| **GPS** | NEO-6M | Provides precise time synchronization using satellite signals and retrieves location data (latitude, longitude, altitude). |
-| **Motion Sensor** | MPU6050 | Tracks acceleration and gyroscopic motion, used for gesture-based interactions |
-| **Magnetic Sensor** | HMC5883L | Functions as a digital compass to determine cardinal directions, used for orienting the display or additional features. |
-| **Light Sensor** | BH1750 | Measures ambient light levels in lux. |
+| **MCU** | ESP32 / STM32WB55 | Microcontroller platforms for the clock. |
+| **RTC** | DS3231 | Maintains accurate timekeeping even when the main power is off (using a backup battery). |
+| **GPS** | NEO-8M | Provides precise time synchronization using satellite signals and retrieves location data (latitude, longitude, altitude). |
+| **Temperature, Humidity, & Pressure Sensor** | BME280 | Measures ambient temperature, barometric pressure, and humidity. |
+| **Motion Sensor** | MPU6050 | Tracks acceleration and gyroscopic motion. |
+| **Magnetic Sensor** | HMC5883L | Functions as a digital compass to determine cardinal directions. |
+| **Light Sensor** | BH1750 | Measures ambient light levels. |

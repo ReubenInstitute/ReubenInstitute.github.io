@@ -1,102 +1,186 @@
-# Date
+# Date & Time Library
 
-## Date
+## Date Class
 
-```java
-public final class Date {
-	public final int year;
-	public final int month;
-	public final int day;
+### Attributes
 
-	public Date(int year, int month, int day);
+* `year` – The Gregorian year (e.g., 2026).
+* `month` – The month of the year as an integer (1 = January, 12 = December).
+* `day` – The day of the month, starting at 1.
+* `ordinal` – The absolute day count since 1 January 0001 (the Chronological Julian Day Number). This integer is the backbone of all calendar arithmetic and conversion.
 
-	public static Date today();
-	public static Date fromEpochDays(int epochDays);
-	public static Date fromJulianDay(double julianDay);
 
-	public static boolean isLeapYear(int year);
-	public static int numDaysInMonth(int month, int year);
 
-	public int epochDays();
-	public double julianDay();
-	public int weekDay();
+### Constructors
 
-	public Date add(DaysSpan span);
-	public Date subtract(DaysSpan span);
-	public DaysSpan difference(Date other);
-}
+```python
+def __init__(self, year=1, month=1, day=1)
 ```
 
-## DaysSpan
+Creates a `Date` from a Gregorian year, month, and day.
 
-```java
-public final class DaysSpan {
-	public final int days;
+---
 
-	public DaysSpan(int days);
-}
+```python
+@classmethod
+def fromordinal(cls, ordinal)
 ```
 
-## Time
+Creates a `Date` from an absolute ordinal day count.
 
-```java
-public final class Time {
-	public final int hour;
-	public final int minute;
-	public final double second;
+### Properties
 
-	public Time(int hour, int minute, double second);
-
-	public static Time now();
-	public static Time fromDaySeconds(double daySeconds);
-
-	public double daySeconds();
-	public String toString();
-}
+```python
+@property
+def next(self)
 ```
 
-## HoursSpan
+Returns the following calendar day as a new `Date`.
 
-```java
-public final class HoursSpan {
-	public final int hours;
-
-	public HoursSpan(int hours);
-}
+```python
+@property
+def prev(self)
 ```
 
-## SecondsSpan
+Returns the preceding calendar day as a new `Date`.
 
-```java
-public final class SecondsSpan {
-	public final double seconds;
-
-	public SecondsSpan(double seconds);
-}
+```python
+@property
+def dayofweek(self)
 ```
 
-## DateTime
+Returns the day of the week as an integer, where 1 = Sunday and 7 = Saturday.
 
-```java
-public final class DateTime {
-	public final Date date;
-	public final Time time;
+### Operators
 
-	public DateTime(Date date, Time time);
-
-	public static DateTime now();
-	public static DateTime fromJulianDay(double julianDay);
-
-	public double julianDay();
-	public DateTime local();
-
-	public DateTime add(DaysSpan span);
-	public DateTime subtract(DaysSpan span);
-	public DateTime add(HoursSpan span);
-	public DateTime subtract(HoursSpan span);
-	public DateTime add(SecondsSpan span);
-	public DateTime subtract(SecondsSpan span);
-
-	public SecondsSpan difference(DateTime other);
-}
+```python
+def __add__(self, days)
 ```
+
+Returns a new `Date` advanced by the given number of days.
+
+```python
+def __sub__(self, days)
+```
+
+Returns a new `Date` moved back by the given number of days.
+
+### Static Helpers
+
+```python
+@staticmethod
+def isleapyear(year)
+```
+
+Returns `True` if the given Gregorian year is a leap year.
+
+```python
+@staticmethod
+def numdaysinmonth(month, year)
+```
+
+Returns the number of days in the given month (1–12), accounting for leap years when `month` is February.
+
+
+## Time Class
+
+### Attributes
+
+* `hour` – The hour component (0–23).
+* `minute` – The minute component (0–59).
+* `second` – The second component (0–59).
+* `serial` – Total seconds since midnight (0–86399). This integer is the backbone of all time arithmetic, and the only place where the constant `86400` is used as a wrap-around limit.
+
+### Constructors
+
+```python
+def __init__(self, hour=0, minute=0, second=0)
+```
+
+Creates a `Time` from hour, minute, and second components.
+
+```python
+@classmethod
+def fromserial(cls, serial)
+```
+
+Creates a `Time` from a total-seconds-since-midnight value.
+
+### Operators
+
+```python
+def __add__(self, seconds)
+```
+
+Returns a new `Time` advanced by the given number of seconds, wrapping within the 24-hour day (modulo 86400).
+
+
+## DateTimeSpan Class
+
+### Attributes
+
+* `days` – The difference in whole calendar days.
+* `seconds` – The remaining seconds within the day (always 0–86399).
+
+### Constructors
+
+```python
+def __init__(self, days, seconds)
+```
+
+Creates a `DateTimeSpan` from a day count and a seconds count.
+
+
+## DateTime Class
+
+### Attributes
+
+* `date` – The `Date` component.
+* `time` – The `Time` component.
+
+### Constructors
+
+```python
+def __init__(self, date, time)
+```
+
+Creates a `DateTime` from a `Date` and a `Time`.
+
+```python
+@classmethod
+def fromjulianday(cls, julianday)
+```
+
+Creates a `DateTime` from an astronomical Julian Day number.
+
+### Properties
+
+```python
+@property
+def julianday(self)
+```
+
+Returns the astronomical Julian Day number (float), derived from the `ordinal` and `serial` of its components.
+
+### Operators
+
+```python
+def __sub__(self, other)
+```
+
+Returns a `DateTimeSpan` representing the elapsed time between two `DateTime` objects.
+
+```python
+def __add__(self, seconds)
+```
+
+Returns a new `DateTime` advanced by the given number of seconds. Date overflow (crossing midnight) is handled automatically.
+
+```python
+def __lt__(self, other)
+def __le__(self, other)
+def __gt__(self, other)
+def __ge__(self, other)
+```
+
+Compares two `DateTime` objects chronologically — first by `ordinal`, then by `serial`.

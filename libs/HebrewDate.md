@@ -1,163 +1,106 @@
-# HebrewDate
+# Hebrew Date Library
 
-## HebrewDate
+## HebrewDate Class
 
-```java
-public final class HebrewDate {
-	public final int year;
-	public final int month;
-	public final int day;
+### Attributes
 
-	public HebrewDate(int year, int month, int day);
+* `year` – The Hebrew year number (e.g., 5786).
+* `month` – The month of the year as a `HebrewMonth` enum member.
+* `day` – The day of the month, starting at 1.
+* `ordinal` – The absolute day count since the Hebrew calendar epoch. Used for conversion to and from `Date`.
 
-	public static HebrewDate fromEpochDays(int epochDays);
+### Constructors
 
-	public static boolean isLeapYear(int year);
-	public static int numMonthInYear(int year);
-	public static int numDaysInYear(int year);
-	public static int numDaysInMonth(int year, int month);
-	public static boolean hasLongHeshvan(int year);
-	public static boolean hasShortKislev(int year);
-
-	public int epochDays();
-	public int weekDay();
-	public HebrewHoliday holiday();
-}
+```python
+def __init__(self, year=1, month=HebrewMonth.TISHREI, day=1)
 ```
 
-## HebrewHoliday
+Creates a HebrewDate from a Hebrew year, month, and day.
 
-```java
-public enum HebrewHoliday {
-	NONE,
-	PESACH,
-	CHOL_HAMOED_PESACH,
-	PESACH_VII,
-	YOM_HASHOAH,
-	YOM_HAZIKKARON,
-	YOM_HAATZMAUT,
-	PESACH_SHENI,
-	LAG_BAOMER,
-	YOM_YERUSHALAYIM,
-	SHAVUOT,
-	SHIVA_ASAR_BETAMMUZ,
-	TISHA_BEAV,
-	TU_BEAV,
-	ROSH_HASHANA,
-	ROSH_HASHANA_II,
-	TZOM_GEDALIAH,
-	YOM_KIPPUR,
-	SUKKOT,
-	CHOL_HAMOED_SUKKOT,
-	HOSHANA_RABBAH,
-	SIMCHAT_TORAH,
-	CHANUKKA_I,
-	CHANUKKA_II,
-	CHANUKKA_III,
-	CHANUKKA_IV,
-	CHANUKKA_V,
-	CHANUKKA_VI,
-	CHANUKKA_VII,
-	CHANUKKA_VIII,
-	ASARA_BETEVET,
-	TU_BISHVAT,
-	TAANIT_ESTHER,
-	PURIM,
-	SHUSHAN_PURIM
-}
+```python
+@classmethod
+def fromordinal(cls, ordinal)
 ```
 
-## Torah
+Creates a HebrewDate from an absolute ordinal day count.
 
-```java
-public final class Torah {
-	public final Parashah[] parashot;
-	public final SpecialReading special;
-
-	public Torah(HebrewDate date);
-	public Torah(HebrewDate date, boolean diaspora);
-}
+```python
+@classmethod
+def fromdate(cls, date)
 ```
 
-## Parashah
+Creates a HebrewDate from a Date object.
 
-```java
-public enum Parashah {
-	BERESHIT,
-	NOACH,
-	LECHLECHA,
-	VAYERA,
-	CHAYEISARAH,
-	TOLEDOT,
-	VAYETZE,
-	VAYISHLACH,
-	VAYESHEV,
-	MIKETZ,
-	VAYIGASH,
-	VAYECHI,
-	SHEMOT,
-	VAEIRA,
-	BO,
-	BESHALACH,
-	YITRO,
-	MISHPATIM,
-	TERUMAH,
-	TETZAVEH,
-	KITISA,
-	VAYAKHEL,
-	PEKUDEI,
-	VAYIKRA,
-	TZAV,
-	SHEMINI,
-	TAZRIA,
-	METZORA,
-	ACHAREIMOT,
-	KEDOSHIM,
-	EMOR,
-	BEHAR,
-	BECHUKOTAI,
-	BAMIDBAR,
-	NASO,
-	BEHAALOTECHA,
-	SHELACH,
-	KORACH,
-	CHUKAT,
-	BALAK,
-	PINCHAS,
-	MATOT,
-	MASEI,
-	DEVARIM,
-	VAETCHANAN,
-	EIKEV,
-	REEH,
-	SHOFTIM,
-	KITEITZEI,
-	KITAVO,
-	NITZAVIM,
-	VAYEILECH,
-	HAAZINU,
-	VEZOTHABERACHAH
-}
+### Properties
+
+```python
+@property
+def next(self)
 ```
 
-## SpecialReading
+Returns the following Hebrew calendar day as a new HebrewDate.
 
-```java
-public enum SpecialReading {
-	SHEKALIM,
-	ZAHOR,
-	PARAH,
-	HAHODESH,
-	HAGGADOL,
-	ROSH_HASHANAH_I,
-	YOM_KIPPUR,
-	SUCCOTH_I,
-	HOL_HAMOED_SUCCOTH,
-	SHEMINI_AZERETH,
-	PESAH_I,
-	PESAH_VII,
-	PESAH_VIII,
-	SHAVUOTH_II,
-	HOL_HAMOED_PESAH
-}
+```python
+@property
+def prev(self)
 ```
+
+Returns the preceding Hebrew calendar day as a new HebrewDate.
+
+```python
+@property
+def dayofweek(self)
+```
+
+Returns the day of the week as an integer, where 1 = Sunday and 7 = Saturday.
+
+### Static Helpers
+
+```python
+@staticmethod
+def isleapyear(year)
+```
+
+Returns True if the given Hebrew year is a leap year (contains Adar II).
+
+```python
+@staticmethod
+def nummonthinyear(year)
+```
+
+Returns the number of the last month in the year (12 = Adar, 13 = Adar II).
+
+```python
+@staticmethod
+def elapseddays(year)
+```
+
+Returns the number of days from the creation epoch to the start of Tishrei of the given year.
+
+```python
+@staticmethod
+def numdaysinyear(year)
+```
+
+Returns the total number of days in the given Hebrew year.
+
+```python
+@staticmethod
+def haslongheshvan(year)
+```
+
+Returns True if Cheshvan has 30 days in the given year.
+
+```python
+@staticmethod
+def hasshortkislev(year)
+```
+
+Returns True if Kislev has 29 days in the given year.
+
+```python
+@staticmethod
+def numdaysinmonth(year, month)
+```
+
+Returns the number of days in the given month of the given year.
