@@ -78,5 +78,3 @@ Each booklet's cover illustration reflects its theme:
 * **Kashrut:** Divided icons of dairy, meat, and pareve foods (grains and fruits) alongside a hechsher symbol.
 * **Mikvah:** Rippling, clear water with soft reflections.
 * **Tzedakah:** A traditional charity box with radiating lines suggesting community and giving.
-
-## [Crowdfunding Campaign](Campaign.md)

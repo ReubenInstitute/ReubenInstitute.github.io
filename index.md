@@ -11,11 +11,14 @@ produce meticulously curated content across **print**, **digital**, **audio**, a
 By combining rigorous academic standards with modern technology, the Institute ensures that
 historical traditions remain accessible and accurate for contemporary audiences.
 
-## Dev Lab
+### Scholarly
 
-The Institute builds in the open— every breakthrough, false start, and late‑night refactor— is public, updated session by session. It's not a polished report; it's the raw, honest chronicle of how we work, warts and all. No commercial secrets, nothing hidden— just a transparent, running record of what we're building and why.
+#### [The Year 5787](5787.md)
 
-Meet our [Team](Team.md), see our full [Dev Log](log/log.md), and see who are we [Following](Following.md).
+#### [Reading Cycles](ReadingCycles.md)
+
+#### [Biblical Measures](BiblicalMeasures.md)
+
 
 ---
 
@@ -65,6 +68,12 @@ A structured, hands‑on introduction to the language of the Talmud and Zohar, b
 
 ---
 
+## [GPS Hebrew Clock](HebrewClock.md)
+
+A timepiece that tells the hour the ancient way — dividing daylight and darkness into twelve proportional parts, shifting with the seasons. More a conceptual instrument than a standard clock, it connects modern timekeeping to the temporal rhythm of Hebrew prayer and tradition. It's at once a practical tool, a curiosity, and a quiet reminder that time itself can be measured by a sacred calendar.
+
+---
+
 ## Android Apps
 
 ### 📱 [HebrewDate](apps/HebrewDateAndroidApp.md)
@@ -87,7 +96,7 @@ A phone‑based interface to the Institute's audio library, for those without sm
 
 ---
 
-## Booklets
+## Booklets Series
 
 ### 📖 [Halakhah, Haggadah, and History](HalakhahHaggadahHistory.md)
 
@@ -95,37 +104,11 @@ A growing library of booklets that weaves legal rulings, narrative legends, and 
 
 ### 📖 Weekly Parashah
 
-A clean, print‑ready companion for each week's Torah portion, designed to sit alongside the Institute's Weekly Parashah video series. It gathers the Hebrew text, a faithful translation, and a curated selection of commentary, all in a format meant for the Shabbat table or a quiet study session. ([Crowdfunding Campaign](CampaignParashah.md) is underway to bring each portion to print.)
+A clean, print‑ready companion for each week's Torah portion, designed to sit alongside the Institute's Weekly Parashah video series. It gathers the Hebrew text, a faithful translation, and a curated selection of commentary, all in a format meant for the Shabbat table or a quiet study session.
 
 ### 📖 Zaggin diDhava (Bells of Gold)
 
 A small, jewel‑like volume whose Aramaic title promises something precious. Without giving away its contents, it's the kind of booklet the Institute does best: a tightly focused exploration where language, source‑text, and design meet — part anthology, part commentary, and entirely a delight for the attentive reader.
-
----
-
-## Products
-
-### [Hebrew Clock](HebrewClock.md)
-
-A timepiece that tells the hour the ancient way — dividing daylight and darkness into twelve proportional parts, shifting with the seasons. More a conceptual instrument than a standard clock, it connects modern timekeeping to the temporal rhythm of Hebrew prayer and tradition. It's at once a practical tool, a curiosity, and a quiet reminder that time itself can be measured by a sacred calendar.
-
-### [Meron Judaica](MeronJudaica.md)
-
-A collaborative side-project born from a partnership with artisans in Meron, offering physical ritual items and small editions that carry a sense of place and tradition. It's kept deliberately separate from the Institute's core scholarly work.
-
----
-
-## Scholarly
-
-Behind every video, app, and booklet sits a set of internal standards — how the Institute handles punctuation, typography, translation philosophy, code style, and even its own novel learning method. These pages aren't tutorials for the public so much as a window into the precision that underpins everything else. They're where the "obsession for accuracy" becomes explicit, written policy.
-
-### [Reading Cycles](ReadingCycles.md)
-
-### [Typography](Typography.md)
-
-### [Style](Style.md)
-
-### [Code](Code.md)
 
 ---
 
@@ -152,6 +135,43 @@ A suite of free software code packages released by the Institute, each one solvi
 ### [Sensors](libs/Sensors.md)
 
 ---
+
+## Standards
+
+Behind every video, app, and booklet sits a set of internal standards — how the Institute handles punctuation, typography, translation philosophy, code style, and even its own novel learning method. These pages aren't tutorials for the public so much as a window into the precision that underpins everything else. They're where the "obsession for accuracy" becomes explicit, written policy.
+
+### [Typography](Typography.md)
+
+### [Style](Style.md)
+
+### [Code](Code.md)
+
+---
+
+## Dev Lab
+
+The Institute builds in the open— every breakthrough, false start, and late‑night refactor— is public, updated session by session. It's not a polished report; it's the raw, honest chronicle of how we work, warts and all. No commercial secrets, nothing hidden— just a transparent, running record of what we're building and why.
+
+We studied and corrected Hebrew and Aramaic texts. We wrote and refactored software libraries for text, calendar, astronomy, media, and typography. We produced and published audio and video content. We built and tested hardware prototypes for a clock. We built a print-generation pipeline and produced calendar and planner pages from our own engine. We designed the Institute’s brand and enforced its rules, including the Shabbat lock and public logging. We did not just plan any of this. We built it, broke it, fixed it, and shipped the whole operation.
+
+Meet our [Team](Team.md), see our full [Dev Lab logs](log/log.md), and see who are we [Following](Following.md).
+
+---
+
+
+
+<!--
+## [Store: Meron Judaica](MeronJudaica.md)
+
+A collaborative side-project born from a partnership with artisans in Meron, offering physical ritual items and small editions that carry a sense of place and tradition. It's kept deliberately separate from the Institute's core scholarly work.
+
+---
+
+## [Campaigns](Campaigns.md)
+
+
+---
+-->
 
 ## Meh
 
