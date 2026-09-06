@@ -19,7 +19,6 @@ historical traditions remain accessible and accurate for contemporary audiences.
 
 #### [Biblical Measures](BiblicalMeasures.md)
 
-
 ---
 
 ## Multimedia Series
