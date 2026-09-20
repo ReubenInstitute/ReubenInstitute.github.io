@@ -120,27 +120,27 @@
 
 @font-face {
 	font-family: 'ptserif';
-	src: url('/fonts/PTSerif-Regular.ttf') format('truetype');
+	src: url('/fonts/PT_Serif-Web-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'ptserif';
-	src: url('/fonts/PtSerif-Bold.ttf') format('truetype');
+	src: url('/fonts/PT_Serif-Web-Bold.ttf') format('truetype');
 	font-weight: bold;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'ptserif';
-	src: url('/fonts/PtSerif-Italic.ttf') format('truetype');
+	src: url('/fonts/PT_Serif-Web-Italic.ttf') format('truetype');
 	font-weight: normal;
 	font-style: italic;
 }
 @font-face {
 	font-family: 'ptserif';
-	src: url('/fonts/PtSerif-BoldItalic.ttf') format('truetype');
+	src: url('/fonts/PT_Serif-Web-BoldItalic.ttf') format('truetype');
 	font-weight: bold;
 	font-style: italic;
 }
@@ -184,7 +184,7 @@
 
 @font-face {
 	font-family: Lulav;
-	src: url('/fonts/LulavCLM-Bold.ttf') format('opentype');
+	src: url('/fonts/LulavCLM-Bold.otf') format('opentype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -226,7 +226,7 @@
 
 @font-face {
 	font-family: sbl;
-	src: url('/fonts/SBL_Hbrw.ttf') format('truetype');
+	src: url('/fonts/SBLHebrew.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -241,7 +241,7 @@
 
 @font-face {
 	font-family: hillel;
-	src: url('/fonts/HillelCLM-Medium.ttf') format('truetype');
+	src: url('/fonts/HillelCLM-Medium.otf') format('opentype');
 }
  */
 
