@@ -5,9 +5,9 @@ Maintainer: Reuben Institute <robert.wallner.edward@gmail.com>
 Depends: python3, python3-date
 Filename: ./python3-astro_1.0_all.deb
 Size: 6868
-MD5sum: 768e00d36ad992efb9e2539bcb779a1c
-SHA1: 4d25b15d17b7b30169aaf3165f177593e2168535
-SHA256: 484bacb166264c7b702576ca6ff0d7ec4e05a455ce4b09e9eee7fc1e2bdfeb63
+MD5sum: d747663efc7f20119675630bdd8719b4
+SHA1: f4e7834e41a14931956f6a9fdaa69577b89703b9
+SHA256: 04ed7879908486dcee4fbc568d01bd350498a14ddfa9cb99af96058bdc36b152
 Section: python
 Priority: optional
 Description: Astronomy utilities
@@ -21,9 +21,9 @@ Maintainer: Reuben Institute <robert.wallner.edward@gmail.com>
 Depends: python3
 Filename: ./python3-date_1.0_all.deb
 Size: 3054
-MD5sum: 4a1b09b879a1fa5b673d53070864c20f
-SHA1: 2f884c1f562fb518dff4925415f69f5662631e0c
-SHA256: 93c26f754cb56fe3279a095f03214e0ec9d08f89952a38af2bd4b1604b51f5f4
+MD5sum: 39c94c164732d62deeb483b53266d1d2
+SHA1: 4e3cfa59062c17511704b93c2744b147cae8513a
+SHA256: 9fd551caf06075ba0ad018b58e5dd10155f63782930227e5622cb6a2b4e3a0fa
 Section: python
 Priority: optional
 Description: Gregorian date/time utilities
@@ -36,14 +36,46 @@ Architecture: all
 Maintainer: Reuben Institute <robert.wallner.edward@gmail.com>
 Depends: python3, python3-regex
 Filename: ./python3-hebrew_1.0_all.deb
-Size: 5328
-MD5sum: 6c4a0b63f36800b7c0065fa17c32f9b1
-SHA1: 8f6fd1554d25578a9b1e3f9ba2c2bd468c31afdc
-SHA256: 283fc660c56899d22fb9aa02349da8716cd54bedefe0b722ddd49fbd9f50238e
+Size: 5330
+MD5sum: 33d71f703fc067f1507a242686bcbefd
+SHA1: 47afcfb0f3cd5b8b98a25098945523b55442d189
+SHA256: 26bc9e1d255bb5352320596520d95476b11d622374ce13ed8cc0164f79d15736
 Section: python
 Priority: optional
 Description: Hebrew text and numeral utilities
  Provides Hebrew and HebrewNumbers modules for working with
  Hebrew text (letter constants, transliteration helpers) and
  Hebrew numeral (gematria) conversion.
+
+Package: python3-hebrewdate
+Version: 1.0
+Architecture: all
+Maintainer: Reuben Institute <robert.wallner.edward@gmail.com>
+Depends: python3, python3-date
+Filename: ./python3-hebrewdate_1.0_all.deb
+Size: 9198
+MD5sum: e38eb9870e404e9d78862d97cf6863ae
+SHA1: 9b46da031d8fca2946fb419744a92c74fc177d98
+SHA256: 050051e36b4afa6a305f3abdec39591e93936b8cbfd1f857f112dfca9c19b02e
+Section: python
+Priority: optional
+Description: Hebrew calendar utilities
+ Provides HebrewDate, HebrewHoliday and TorahSchedule modules for
+ Hebrew calendar dates, holidays, and the Torah reading schedule.
+
+Package: python3-hebrewyemama
+Version: 1.0
+Architecture: all
+Maintainer: Reuben Institute <robert.wallner.edward@gmail.com>
+Depends: python3, python3-date, python3-astro, python3-hebrewdate, python3-pil
+Filename: ./python3-hebrewyemama_1.0_all.deb
+Size: 11906
+MD5sum: f17f5721c6556b9d2f485d62dc1394a8
+SHA1: 3fa69fb7e8c79a120b3c098ed39c761ea32f8440
+SHA256: 8d730511025be279c57fa0ddcc003738a667b09be7146f4aab49ef8491748331
+Section: python
+Priority: optional
+Description: Halakhic day-division times and clock rendering
+ Provides HebrewYemama, Clock, Display and Custom modules for halakhic
+ day-division times (yemama), clock rendering, and custom day-definitions.
 
