@@ -1,13 +1,13 @@
 Package: python3-date
-Version: 1.0~rc1
+Version: 1.0
 Architecture: all
 Maintainer: Reuben Institute <robert.wallner.edward@gmail.com>
 Depends: python3
-Filename: ./python3-date_1.0~rc1_all.deb
-Size: 3052
-MD5sum: cf51d7878340d29cd3a772de4c3c9aed
-SHA1: b0ab2b7bac91bbd8a454331f39d1a7dca9c0a8ef
-SHA256: d6f41f98af0d2acad942d55ea4a27aad57c3c3a8caac9e50bff8a9ebc1743764
+Filename: ./python3-date_1.0_all.deb
+Size: 3048
+MD5sum: 94020d3bfe4425d18de182595dbef840
+SHA1: 14a8c93db19af6c0f8790edd91af8b4aaf0f4bbc
+SHA256: bbb8c7a0d41e48f16f46652ded82aa2c120a3ee0d04169513cea5b34b4f61238
 Section: python
 Priority: optional
 Description: Gregorian date/time utilities
@@ -15,15 +15,15 @@ Description: Gregorian date/time utilities
  Gregorian calendar and Julian day calculations.
 
 Package: python3-hebrew
-Version: 1.0~rc1
+Version: 1.0
 Architecture: all
 Maintainer: Reuben Institute <robert.wallner.edward@gmail.com>
 Depends: python3, python3-regex
-Filename: ./python3-hebrew_1.0~rc1_all.deb
-Size: 5334
-MD5sum: 66950c6c72e0905f9029153fad534b5f
-SHA1: a8458bcab4504a1a69e229458f07b148f800980a
-SHA256: 390909f2e1c9f085a48e2b643a031c674a2075dd35e9394d0902d399b23cc8c1
+Filename: ./python3-hebrew_1.0_all.deb
+Size: 5326
+MD5sum: c938a823f508f2d484bd599f5a4ae19a
+SHA1: 4fa7de204ba7d42eac8af947914fbd5fbfda47e8
+SHA256: 9ba9f443e111361553b208c7c64298cd3227d1337cd531e51f6cd429ee60c1d9
 Section: python
 Priority: optional
 Description: Hebrew text and numeral utilities

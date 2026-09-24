@@ -1,23 +1,23 @@
 Architectures: all arm64 amd64
 Codename: stable
 Components: main
-Date: Thu, 24 Sep 2026 17:35:53 +0000
+Date: Thu, 24 Sep 2026 18:17:35 +0000
 Label: Reuben Institute
 Origin: Reuben Institute
 Suite: stable
 MD5Sum:
- 2ed41626ddbe4da96f5a58b80855c8ef             1151 Packages
- 0ab580504852a2f7fd5f451b3e6a349d              630 Packages.gz
- 64bc1636f768f980fcd101c1b3dc8c7b              166 Release
+ edb363581fcec096f3804c0bd93b0d07             1135 Packages
+ 87de674e867d5b13533715594af7cac0              623 Packages.gz
+ e62b4cd4b58b22e8616a8df1586ee957             1332 Release
 SHA1:
- 4a2ddc3cdb09e8468e283a3e98e3b7a97477007a             1151 Packages
- 2ad08aadfa322659511a5fc5f113b63a947f53f8              630 Packages.gz
- f13beede594b265dce6501ea60cf984eadddb369              166 Release
+ b47f58fef070f64d412e35b908fdc58f0fb5f12d             1135 Packages
+ 128099c0fb54474708e2b5be45f89c47ad397a9f              623 Packages.gz
+ 4ce15209008d87858ef6e81f1fe65cf58ffcf104             1332 Release
 SHA256:
- 085eb522ec6f330a3340f6eab7d653d5d744f6a4129999bf50b07bc503c87e8e             1151 Packages
- ad7a9828e8e9198869fa87d2f2424005c379380147a7995fcf8093478716f80b              630 Packages.gz
- 31ab0c2180e309b1e42b157bd2d53428d8a52e981595cba769bc05f4a8421f8e              166 Release
+ f9a1b0162aec72a5a7d60e5f5558a5451b49ea66b1f9d573dbd866b62ba95e9f             1135 Packages
+ 25fd58afabf52da9d150771de72e20ac6c419a1bf028047a2598bb7b489776a3              623 Packages.gz
+ c795811b0c8f291611e92e6cd984216ab5f3dcdf32b0c4e33f3923f66ca777a1             1332 Release
 SHA512:
- 4ae8382487f940596ae5e03a3edd7e6d9c163ed2719a4fb1b748a958d5cc68cb9d41c5aab71f5505e3af0a331f1f5f9e9863b389d88d98949dcea1f76f530cb3             1151 Packages
- 22a0eba3bb221a1b9635580134ccb2ed8c0eef511c395e9aa8165afd93e6b7eeb3686a97dc07b944d502624b62f105ab70dda20cbfea52f887753e5fccd111d7              630 Packages.gz
- 90b7a178d457e322789c632b49642ac7299831c0600b4517e16017f9434c380314b7e6f000c26e1663d129677cae1f7e70786dc2c10279f73f2c458b78c1136c              166 Release
+ f59cc4357570cdb95fb908937dd200bcc5fdf11f365bd54fb9c29f95a01f5aaf7305ad92bea35b3a7cd28a4aac9f728903f3f4a531e81b73f906e4f7cc7ed74a             1135 Packages
+ 62a349d8a82f28d2f7202a0f18c42d041f7e617bf3f36843834dac1c2da12c57cbd90fb3dea7d6353825ffb42f7302dcba68231d9cb5b604797230839c43a58d              623 Packages.gz
+ 638d8be9a10ef8c3b444bce4f5d82aea913bec3826afe5e641b3af732a4eac1234bd32ec3b21dedf5dc8c0e6ac6ba6abc186fb5894219432554317b48959fd0d             1332 Release
