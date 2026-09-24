@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Rebuild the /deb and /pip/simple package repos from their source repos.
 
-Run this from inside the reubeninstitute.github.io checkout after pushing
+Run this from inside the ReubenInstitute.github.io checkout after pushing
 changes to a package's source repo. It does not touch git — commit and push
 this repo yourself afterward.
 """

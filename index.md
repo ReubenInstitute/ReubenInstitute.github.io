@@ -180,7 +180,7 @@ A collaborative side-project born from a partnership with artisans in Meron, off
 
 ## Contact
 
-* [Website: reubeninstitute.github.io](https://reubeninstitute.github.io)
-* [GitHub: github.com/reubeninstitute](https://github.com/reubeninstitute)
+* [Website: ReubenInstitute.github.io](https://ReubenInstitute.github.io)
+* [GitHub: github.com/ReubenInstitute](https://github.com/ReubenInstitute)
 * [Google Drive](https://drive.google.com/drive/folders/1OTBOiLWt1mf_4Fu4UF7HdHuzJFJjg5BA)
 * [Email: reubeninstitute@gmail.com](mailto:reubeninstitute@gmail.com)
