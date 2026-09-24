@@ -4,39 +4,39 @@ Hash: SHA512
 Architectures: all arm64 amd64
 Codename: stable
 Components: main
-Date: Thu, 24 Sep 2026 19:48:31 +0000
+Date: Thu, 24 Sep 2026 22:59:20 +0000
 Label: Reuben Institute
 Origin: Reuben Institute
 Suite: stable
 MD5Sum:
- d6177e2c7bcc420e832dc7baa5716fe4             2922 Packages
- 8850043f2d3632b0a56fe6ea08a7986c             1184 Packages.gz
- 31d17d3de5e628bf0bffb10c64944fa3             1332 Release
+ eab1860dabc7548ae5f3b3a7e33fa1bd             4254 Packages
+ 17c166a10a34cdb036e27daa647d4a68             1650 Packages.gz
+ 1fbbb0156a6331a54643e8e080fdf281             1332 Release
 SHA1:
- 69d02ac306ff9c3f081da4ff958067648cfe0f19             2922 Packages
- 0be77da1fbd145f2a6b09a774633d7b520afab1e             1184 Packages.gz
- 42d6f9a7086b7b4a77c9f4525b3e2545933bfa47             1332 Release
+ 934d0a10f7ffcbe5636f93d3226381658bb7a962             4254 Packages
+ 73b95698865996a6237388dc614609cda193c491             1650 Packages.gz
+ 0c768a2610aeae05742e34fc3793cdac302e5e8b             1332 Release
 SHA256:
- 6fc0afa9e27776f8777f4ec0266a60da3aac9789fe2ab23685f7779ae2cf185c             2922 Packages
- 3a705cec5d369ffac795de7cd71e93faeaba57b56e61eeacf25898a05ddb67a5             1184 Packages.gz
- 05b15586713006590aa6af7657908ca155633de9e8346f2fb4cfd5f846e90ac1             1332 Release
+ 6222ebe4a09ed562be41e3c95d54431faa2d077f0503b8e75267b8cbd4a3fed9             4254 Packages
+ dca7e66257b8e20eab00fab8b54b7d7d27ff71453fbab1ef32106db0d84bac4f             1650 Packages.gz
+ 13d4c79dd9e3901801228ab150f8f28e5c0437b3f0fcbb1896f7aa73af51d362             1332 Release
 SHA512:
- 9d3c527f78a6cef4671ba0dcca09afc4b0057ec90058d382c989c39ae71893715b27f48fbd2b625587a467fb28d5522a12b9d4b7cc85474ebcfb2b6dc87bdc7d             2922 Packages
- f67671cab653fa2a76e64bab31d4b1f9886c13d47080ec9f96871c840e10da63193ddf756b8fda091a68d1b6a00b293ee0bbe8f92e82d9d0c2456aaf670c13b9             1184 Packages.gz
- 111efeecd10430d35a7a34eb12463f2d2bcb431b85c9762bb89f5f366b563b2b58dace86d6b0a71a09163912b2b254c431bcd0c257381757c4d10af9cb7a436b             1332 Release
+ 449f25889998a64bb7cab133eaf7f9d3592b95ef2ddfe07a5cdcb9e8611869a0ca320b99eee766ab88b94cf060523074ffc7a6f1d96601bcebf7e65d31d39fce             4254 Packages
+ 477c2eacad2d71ca716c6ffcdd0d0424db6e8f456604bf2c23958bce1612b988202cea4b9e733aa310f89708f28e4e9e2b40080ab0c014f91c627a3eb1ba9db4             1650 Packages.gz
+ c307d35790f64dc69bf3e4292e3061bd0ae54ecaa008ed39fad25d81940ea905f4a95e3003d89a3c3cf59cb8bfd1325fd0d7bfd48091f98dd99906b563290621             1332 Release
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEZWcXFm15suPCfD7/gHzMIPJs/wgFAmq1fo8ACgkQgHzMIPJs
-/wjGBg//WNAnePgLujJ4TmiJ8nDB+Ebo/XqFvfzS+wGNaRfqm37f9et4w6guPG82
-GpDfua7ItHpHcVzpHJ04vdEYhqCGO3OaOOQFg8Q8PBmBmQ+Sa4ZEaHU3Vihz0s/K
-Wb3k8VioxeDa6e4+H9qaOfqMlfFufz6PXAsYzStf/PK8xT0IkYoldJH3PX6aYWHU
-3ztc+yOu0watglERdNZP+HGVYT7VVMy0om2RPixsKoxWr4SHIKbvX8Xcty36GGTQ
-L/786j/8bqzWNEb1HztpZu+7rYLrCKtBscPd/JUASLCdBZzA5QQ3eqc8cZrG1ObA
-BqjIz9U7UtIpqZtx7wOZzQuN8EJMOC9cLUxYh8DtSOxkLvOWyjsbVK8t1v+HCz6i
-mvdj07yeFCm7FtI7AY18jRlTr98lUXypKzI0yrlGGvZ5A0lSVhBySegylx3VcE2E
-csn1u1Rp3zTTx8ed8aJ/8pp6DMQeJHDQjGkvqa6jF4lQpTkaLuxllWSLH185/Aba
-Blh3P9fghnoo+XoxvPkcoOr/Qo+U51aGnLJFnUS17H0MxVVRNwXfZQGW4cjTm8CV
-Sza5Bo4X5HxDv8Y1SWIaA2VMbNYJ0GDiy8yaIac6+O+T773KLW/Oh/1gM8ttvlS1
-jHqjAYRZsk5qIevBi535rWaZLkWF+iZzPp2XjaRa/iBliXzHLKw=
-=9wVk
+iQIzBAEBCgAdFiEEZWcXFm15suPCfD7/gHzMIPJs/wgFAmq1q0gACgkQgHzMIPJs
+/wgjPA/+P3KEAZKWEu8aETxjRpWWicNvBS6F9kY0JewvMyuHNCe3HNeP98aEsAgM
+Q+6ibRAYq7roKsu8US5vsFMyg2EsYMIKNyxfN0+Czax6IIJl96kiitKeB6aZQm0Y
+uHKEqeQj9Qm+66yhwO7akyL+68eQxPEvJ3bMV5VTdcus+jaePgUxEgv9mkDH8L1P
+xKkAZ14Dp6lHy9XN6WaIGrohcNMxi8O9MYyjmn6pHof4ihkedPxNOm2DU+oNSDQA
+xv1T2aHRxO6NzT9XBOQGieTgAfPheFL/X+EqBYt253GZgzi2yx4QHIY+FBrz+p+c
+2qduc1kNbbc+JxpxtH11vimbx27x9EZ4W6TwmbRocZaZlw/tKPMCuFi052CVkZLy
+apRGNorVRzDaoUGV2zTn1ZjQRFJfWp6LhP50R3psdzzs/4SEqU22iwtELVSGY0tP
+vmooXglaS078AvsGZ2bA9DP4TPUvjpP6jWNk1dq4aqMqVvzqGm+gF9Ru2b9+EBG8
+u1c1eU0Fjw3pZBcxvRDwkf2OGTDHUwBU0q6SX3NXUgkbOeMsXg5X0hpYEXH91+Tx
++t/s2iSlXV8lKuS1snOeatpAhW4omy2ogERQuFTRzhSp6Ccmy8Yhf+5FsVmGPV4f
+/7J2r2XWFXKHrtTlUU0j3ZSTgrO5XGafmMHcInOIkYS2u7l+Y5I=
+=d5AN
 -----END PGP SIGNATURE-----

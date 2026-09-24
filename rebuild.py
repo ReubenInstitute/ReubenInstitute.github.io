@@ -18,13 +18,14 @@ GPG_KEYID = "807CCC20F26CFF08"
 
 # name: pip/PEP503 project name (as in pyproject.toml [project] name)
 # source: local clone of the package's own repo
-# deb_pkg: Debian package name (as in packaging/deb/control)
+# deb_pkgs: Debian package name(s) built by packaging/deb/build.sh (as in packaging/deb/control*)
 PACKAGES = [
-    {"name": "Hebrew", "source": Path("/root/WORK/Hebrew"), "deb_pkg": "python3-hebrew"},
-    {"name": "Date", "source": Path("/root/WORK/Date"), "deb_pkg": "python3-date"},
-    {"name": "Astro", "source": Path("/root/WORK/Astro"), "deb_pkg": "python3-astro"},
-    {"name": "HebrewDate", "source": Path("/root/WORK/HebrewDate"), "deb_pkg": "python3-hebrewdate"},
-    {"name": "HebrewYemama", "source": Path("/root/WORK/HebrewYemama"), "deb_pkg": "python3-hebrewyemama"},
+    {"name": "Hebrew", "source": Path("/root/WORK/Hebrew"), "deb_pkgs": ["python3-hebrew"]},
+    {"name": "Date", "source": Path("/root/WORK/Date"), "deb_pkgs": ["python3-date"]},
+    {"name": "Astro", "source": Path("/root/WORK/Astro"), "deb_pkgs": ["python3-astro"]},
+    {"name": "HebrewDate", "source": Path("/root/WORK/HebrewDate"), "deb_pkgs": ["python3-hebrewdate"]},
+    {"name": "HebrewYemama", "source": Path("/root/WORK/HebrewYemama"), "deb_pkgs": ["python3-hebrewyemama"]},
+    {"name": "Scriptures", "source": Path("/root/WORK/Scriptures"), "deb_pkgs": ["python3-scriptures", "scriptures-data"]},
 ]
 
 
@@ -40,13 +41,17 @@ def normalize(name):
 
 
 def build_deb(pkg):
-    for old in pkg["source"].glob(f"{pkg['deb_pkg']}_*_all.deb"):
-        old.unlink()
+    for deb_pkg in pkg["deb_pkgs"]:
+        for old in pkg["source"].glob(f"{deb_pkg}_*_all.deb"):
+            old.unlink()
     run(["sh", "packaging/deb/build.sh"], cwd=pkg["source"])
-    debs = list(pkg["source"].glob(f"{pkg['deb_pkg']}_*_all.deb"))
-    if len(debs) != 1:
-        sys.exit(f"expected exactly one .deb for {pkg['name']}, got {debs}")
-    return debs[0]
+    debs = []
+    for deb_pkg in pkg["deb_pkgs"]:
+        matches = list(pkg["source"].glob(f"{deb_pkg}_*_all.deb"))
+        if len(matches) != 1:
+            sys.exit(f"expected exactly one .deb for {deb_pkg}, got {matches}")
+        debs.append(matches[0])
+    return debs
 
 
 def build_sdist(pkg):
@@ -60,13 +65,15 @@ def build_sdist(pkg):
     return sdists[-1]
 
 
-def place_deb(pkg, deb_path):
+def place_deb(pkg, deb_paths):
     DEB_DIR.mkdir(parents=True, exist_ok=True)
-    for old in DEB_DIR.glob(f"{pkg['deb_pkg']}_*_all.deb"):
-        old.unlink()
-    dest = DEB_DIR / deb_path.name
-    shutil.copy2(deb_path, dest)
-    print(f"placed {dest}")
+    for deb_pkg in pkg["deb_pkgs"]:
+        for old in DEB_DIR.glob(f"{deb_pkg}_*_all.deb"):
+            old.unlink()
+    for deb_path in deb_paths:
+        dest = DEB_DIR / deb_path.name
+        shutil.copy2(deb_path, dest)
+        print(f"placed {dest}")
 
 
 def place_sdist(pkg, sdist_path):
