@@ -22,6 +22,7 @@ GPG_KEYID = "807CCC20F26CFF08"
 PACKAGES = [
     {"name": "Hebrew", "source": Path("/root/WORK/Hebrew"), "deb_pkg": "python3-hebrew"},
     {"name": "Date", "source": Path("/root/WORK/Date"), "deb_pkg": "python3-date"},
+    {"name": "Astro", "source": Path("/root/WORK/Astro"), "deb_pkg": "python3-astro"},
 ]
 
 

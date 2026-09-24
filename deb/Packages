@@ -1,13 +1,29 @@
+Package: python3-astro
+Version: 1.0
+Architecture: all
+Maintainer: Reuben Institute <robert.wallner.edward@gmail.com>
+Depends: python3, python3-date
+Filename: ./python3-astro_1.0_all.deb
+Size: 6868
+MD5sum: 768e00d36ad992efb9e2539bcb779a1c
+SHA1: 4d25b15d17b7b30169aaf3165f177593e2168535
+SHA256: 484bacb166264c7b702576ca6ff0d7ec4e05a455ce4b09e9eee7fc1e2bdfeb63
+Section: python
+Priority: optional
+Description: Astronomy utilities
+ Provides Astro, Geo, Sun and Moon modules for celestial location,
+ sun/moon position calculations, and geo coordinates.
+
 Package: python3-date
 Version: 1.0
 Architecture: all
 Maintainer: Reuben Institute <robert.wallner.edward@gmail.com>
 Depends: python3
 Filename: ./python3-date_1.0_all.deb
-Size: 3048
-MD5sum: 94020d3bfe4425d18de182595dbef840
-SHA1: 14a8c93db19af6c0f8790edd91af8b4aaf0f4bbc
-SHA256: bbb8c7a0d41e48f16f46652ded82aa2c120a3ee0d04169513cea5b34b4f61238
+Size: 3054
+MD5sum: 4a1b09b879a1fa5b673d53070864c20f
+SHA1: 2f884c1f562fb518dff4925415f69f5662631e0c
+SHA256: 93c26f754cb56fe3279a095f03214e0ec9d08f89952a38af2bd4b1604b51f5f4
 Section: python
 Priority: optional
 Description: Gregorian date/time utilities
@@ -20,10 +36,10 @@ Architecture: all
 Maintainer: Reuben Institute <robert.wallner.edward@gmail.com>
 Depends: python3, python3-regex
 Filename: ./python3-hebrew_1.0_all.deb
-Size: 5326
-MD5sum: c938a823f508f2d484bd599f5a4ae19a
-SHA1: 4fa7de204ba7d42eac8af947914fbd5fbfda47e8
-SHA256: 9ba9f443e111361553b208c7c64298cd3227d1337cd531e51f6cd429ee60c1d9
+Size: 5328
+MD5sum: 6c4a0b63f36800b7c0065fa17c32f9b1
+SHA1: 8f6fd1554d25578a9b1e3f9ba2c2bd468c31afdc
+SHA256: 283fc660c56899d22fb9aa02349da8716cd54bedefe0b722ddd49fbd9f50238e
 Section: python
 Priority: optional
 Description: Hebrew text and numeral utilities
