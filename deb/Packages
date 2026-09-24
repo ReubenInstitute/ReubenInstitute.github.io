@@ -1,3 +1,19 @@
+Package: python3-date
+Version: 1.0~rc1
+Architecture: all
+Maintainer: Reuben Institute <robert.wallner.edward@gmail.com>
+Depends: python3
+Filename: ./python3-date_1.0~rc1_all.deb
+Size: 3052
+MD5sum: cf51d7878340d29cd3a772de4c3c9aed
+SHA1: b0ab2b7bac91bbd8a454331f39d1a7dca9c0a8ef
+SHA256: d6f41f98af0d2acad942d55ea4a27aad57c3c3a8caac9e50bff8a9ebc1743764
+Section: python
+Priority: optional
+Description: Gregorian date/time utilities
+ Provides the Date module (Date, Time, DateTime classes) for
+ Gregorian calendar and Julian day calculations.
+
 Package: python3-hebrew
 Version: 1.0~rc1
 Architecture: all
