@@ -1,13 +1,13 @@
 Package: python3-hebrew
-Version: 0.1.0
+Version: 1.0~rc1
 Architecture: all
 Maintainer: Reuben Institute <robert.wallner.edward@gmail.com>
 Depends: python3, python3-regex
-Filename: ./python3-hebrew_0.1.0_all.deb
-Size: 5332
-MD5sum: ffe3ab6a42a146ae12aefac4fd500031
-SHA1: 04e9c48519abf70bda31657f9aa55d9c7c07643e
-SHA256: 3fc1d55fa8d6c8f7f7d697a208fd5dc4eb0506e64e51a9d7deea522adf77f912
+Filename: ./python3-hebrew_1.0~rc1_all.deb
+Size: 5334
+MD5sum: 66950c6c72e0905f9029153fad534b5f
+SHA1: a8458bcab4504a1a69e229458f07b148f800980a
+SHA256: 390909f2e1c9f085a48e2b643a031c674a2075dd35e9394d0902d399b23cc8c1
 Section: python
 Priority: optional
 Description: Hebrew text and numeral utilities
