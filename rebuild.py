@@ -23,6 +23,8 @@ PACKAGES = [
     {"name": "Hebrew", "source": Path("/root/WORK/Hebrew"), "deb_pkg": "python3-hebrew"},
     {"name": "Date", "source": Path("/root/WORK/Date"), "deb_pkg": "python3-date"},
     {"name": "Astro", "source": Path("/root/WORK/Astro"), "deb_pkg": "python3-astro"},
+    {"name": "HebrewDate", "source": Path("/root/WORK/HebrewDate"), "deb_pkg": "python3-hebrewdate"},
+    {"name": "HebrewYemama", "source": Path("/root/WORK/HebrewYemama"), "deb_pkg": "python3-hebrewyemama"},
 ]
 
 
