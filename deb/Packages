@@ -1,0 +1,17 @@
+Package: python3-hebrew
+Version: 0.1.0
+Architecture: all
+Maintainer: Reuben Institute <robert.wallner.edward@gmail.com>
+Depends: python3, python3-regex
+Filename: ./python3-hebrew_0.1.0_all.deb
+Size: 5332
+MD5sum: ffe3ab6a42a146ae12aefac4fd500031
+SHA1: 04e9c48519abf70bda31657f9aa55d9c7c07643e
+SHA256: 3fc1d55fa8d6c8f7f7d697a208fd5dc4eb0506e64e51a9d7deea522adf77f912
+Section: python
+Priority: optional
+Description: Hebrew text and numeral utilities
+ Provides Hebrew and HebrewNumbers modules for working with
+ Hebrew text (letter constants, transliteration helpers) and
+ Hebrew numeral (gematria) conversion.
+

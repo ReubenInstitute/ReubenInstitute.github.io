@@ -1,0 +1,23 @@
+Architectures: all arm64 amd64
+Codename: stable
+Components: main
+Date: Thu, 24 Sep 2026 16:49:34 +0000
+Label: Reuben Institute
+Origin: Reuben Institute
+Suite: stable
+MD5Sum:
+ a69b263f683a380c5e185377313e36bf              608 Packages
+ dc7474961e1e806c4b41fb3cad951aaf              435 Packages.gz
+ f9ca72eb470c497a83d32198a2328de2              166 Release
+SHA1:
+ a0b6f8ebb7521759bc95c67c59d1b7574fb26af6              608 Packages
+ 41d788fbf6a33e0b84fd23b926ade9c8eb1e19c1              435 Packages.gz
+ 52740fac8fc7ca32fd489f8f9c175a900958cc90              166 Release
+SHA256:
+ 4eda2478f02ddbeaeb0ff074bb859cf47f14e0ad65068dcf5714f363c2d34c8e              608 Packages
+ b814edc2a4ddfabbdfac2b623fcee6d5dbcf2a9611e80c195221110a17967b90              435 Packages.gz
+ 80b7f136157fe0603d5fe27f796a1cb40275a68606b70aeff1bef6bfbadec5d1              166 Release
+SHA512:
+ 8b632338b66012d626e0c710f69eded4b3f070324458e2bd99c85b06fe08b896da1a663a9f0ff795a93691039ee8656f1344e06e6f0c398ed88f913b47b67b87              608 Packages
+ aa607c15f70190506c6f6cee6b0fd8ace9e512cf5b8ca7ec6ca60d65b5a91f53007a16e79131d42a37254ff6b8d2e171ef43d1261428f3065acaf80a7bc2c348              435 Packages.gz
+ 38314de67ce8c2308c89f4fb24ae01d45c8e2163087c5f7d93fbe8fd9c727dd4a3f5d72e4d7cbac9c8200cb3401fe82cf43ae5236460e0669bf05703af8d2fbe              166 Release
