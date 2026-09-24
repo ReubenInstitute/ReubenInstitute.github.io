@@ -26,6 +26,7 @@ PACKAGES = [
     {"name": "HebrewDate", "source": Path("/root/WORK/HebrewDate"), "deb_pkgs": ["python3-hebrewdate"]},
     {"name": "HebrewYemama", "source": Path("/root/WORK/HebrewYemama"), "deb_pkgs": ["python3-hebrewyemama"]},
     {"name": "Scriptures", "source": Path("/root/WORK/Scriptures"), "deb_pkgs": ["python3-scriptures", "scriptures-data"]},
+    {"name": "Fonts", "source": Path("/root/WORK/Fonts"), "deb_pkgs": ["fonts"], "pip": False},
 ]
 
 
@@ -134,9 +135,10 @@ def main():
         print(f"=== {pkg['name']} ===")
         deb_path = build_deb(pkg)
         place_deb(pkg, deb_path)
-        sdist_path = build_sdist(pkg)
-        dest = place_sdist(pkg, sdist_path)
-        write_project_index(pkg["name"], dest)
+        if pkg.get("pip", True):
+            sdist_path = build_sdist(pkg)
+            dest = place_sdist(pkg, sdist_path)
+            write_project_index(pkg["name"], dest)
 
     write_root_index()
     rebuild_apt_index()
