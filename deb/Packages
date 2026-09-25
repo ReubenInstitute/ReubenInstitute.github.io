@@ -3,10 +3,10 @@ Version: 0.6
 Architecture: all
 Maintainer: Reuben Institute <robert.wallner.edward@gmail.com>
 Filename: ./fonts_0.6_all.deb
-Size: 4993914
-MD5sum: 804ba2bf20420760fbf4a34c358be4d7
-SHA1: eef3bf6698f47c1288e544d922c80c2cb4258865
-SHA256: b9003a0abca749c33bd598b752768f840c963e167659d750ddeeba31a279d7d5
+Size: 4993560
+MD5sum: 91f027c91fef91b8bff160ec9e2fa7d9
+SHA1: a461cad4967026f98c837707ec054cdc1ab22849
+SHA256: 8ca030fa88ee7cbdfb1aa0643bc64aafa92d60fb8e692b36d1d0b19df5603247
 Section: fonts
 Priority: optional
 Description: Reuben Institute fonts
@@ -19,10 +19,10 @@ Architecture: all
 Maintainer: Reuben Institute <robert.wallner.edward@gmail.com>
 Depends: python3, python3-date
 Filename: ./python3-astro_1.3_all.deb
-Size: 6866
-MD5sum: 62959a6f716650a8bfbe5fd990b2b03c
-SHA1: 7b937fedebad2789cdda50fcfd91d9aee12ae689
-SHA256: 2dea3de98274670c4f916a1442f3bdcaa39dbeedc1e64c9999dca0aeb2def119
+Size: 6868
+MD5sum: 1ff27afd10d1699d26ee331df0a314b3
+SHA1: 32c321d66077c8945ed1eebac2a085a870701768
+SHA256: d16e4c149cc6c668d77f1fbd4cc6f397e18e1b2ac0123f7f8e9ebb9028b61688
 Section: python
 Priority: optional
 Description: Astronomy utilities
@@ -35,10 +35,10 @@ Architecture: all
 Maintainer: Reuben Institute <robert.wallner.edward@gmail.com>
 Depends: python3
 Filename: ./python3-date_0.3_all.deb
-Size: 3050
-MD5sum: 0a91704104169009ac5104b9b55a66eb
-SHA1: 29b40034beae6dde9c61fbd36bbb8496f1200afa
-SHA256: b81049f36bb4feb85576de030859303fb23f43a126bc90870d2addfd77e6719f
+Size: 3052
+MD5sum: 739d2076dc6b08b09a75eb0f4adcf62e
+SHA1: f8ab2abf2711e7ae1ae3102f3a69231791019dee
+SHA256: 23dc3b8c29c09dbfa45520b14788a658f55d5594b6f35d610c44763519fb4305
 Section: python
 Priority: optional
 Description: Gregorian date/time utilities
@@ -51,10 +51,10 @@ Architecture: all
 Maintainer: Reuben Institute <robert.wallner.edward@gmail.com>
 Depends: python3, python3-regex
 Filename: ./python3-hebrew_1.7_all.deb
-Size: 5332
-MD5sum: fc08d15989a94f32cfa76ab2623a2fb3
-SHA1: 07347ac942890ce2b5f2b139417dec37b5538c90
-SHA256: 11e8e46b9081d7ab3fabb37c3c8aef4eecbeb48bf57f2fa43c2b40d5a9fd348c
+Size: 5326
+MD5sum: 969a9667adc6d7a09be2acfee2daa3e6
+SHA1: 1f6100b03453271a6aaec7f9101c44e44d443d1c
+SHA256: 14e16758cf304fa2c8237bff82ae0a891b8d90323ccd8fa9558678df6c60d0df
 Section: python
 Priority: optional
 Description: Hebrew text and numeral utilities
@@ -69,9 +69,9 @@ Maintainer: Reuben Institute <robert.wallner.edward@gmail.com>
 Depends: python3, python3-date
 Filename: ./python3-hebrewdate_3.3_all.deb
 Size: 9200
-MD5sum: 004082ab74efe10b704d3cbc8e656fe9
-SHA1: d48e4597268bf6646987a9509b11c68bc3b98196
-SHA256: 406cadd12e98996ffdbafa70e4e6de2b1c01d550bb11f0b2193798e800f7cff6
+MD5sum: 7cb7e6e465548998b5f3c80fc003b72b
+SHA1: 043b3f6c04e509136fb8c64ee35aef92b6722be1
+SHA256: 4f6479e940d0995b287c67bf32ebbc8e23e190868098967a0de092620a827ebc
 Section: python
 Priority: optional
 Description: Hebrew calendar utilities
@@ -85,9 +85,9 @@ Maintainer: Reuben Institute <robert.wallner.edward@gmail.com>
 Depends: python3, python3-date, python3-astro, python3-hebrewdate, python3-pil
 Filename: ./python3-hebrewyemama_0.3_all.deb
 Size: 11906
-MD5sum: 33b94aed53aa1842994571833b796c32
-SHA1: db3c283f2012d0bdbc9822b75dab2b291769e608
-SHA256: 1e4dbd640f9c95244e41aa312a7ac18ad8b47e2f770b0cf45bc40b021a8bfd59
+MD5sum: 4e6abadcf576ace2e9050f955f928e3f
+SHA1: 20f55413df4b062ed929b4a14058d64caeee1081
+SHA256: 5434e6c84e31aa82a6bd23dbb8be2e2fa1fe736b680af42f3215e0e780da16d4
 Section: python
 Priority: optional
 Description: Halakhic day-division times and clock rendering
@@ -95,15 +95,15 @@ Description: Halakhic day-division times and clock rendering
  day-division times (yemama), clock rendering, and custom day-definitions.
 
 Package: python3-scriptures
-Version: 0.15
+Version: 0.18
 Architecture: all
 Maintainer: Reuben Institute <robert.wallner.edward@gmail.com>
 Depends: python3, python3-pandas, python3-hebrew, scriptures-data
-Filename: ./python3-scriptures_0.15_all.deb
-Size: 5088
-MD5sum: ca5053ee02500e9f9237c23d92c00492
-SHA1: a6a5a5f7dbc8c11e13be15dc90bfdabf20e0c2b4
-SHA256: fcb11f7a3bad4c8be5d5597a185a2886c4dcf0b6c9642479ae2b67d6be66f84f
+Filename: ./python3-scriptures_0.18_all.deb
+Size: 5092
+MD5sum: 55f6f1151ab44bc54d26151c77831f39
+SHA1: 7f2bb8803ffe0628e0b51a6d735e695c9e72f356
+SHA256: 255d96ae9de11605bfc1789cb9812b9c7ee4f8f6d44dba2697af6a9731446fbe
 Section: python
 Priority: optional
 Description: Hebrew scripture text classes (Bible, Mishnah, Talmud, Zohar)
@@ -112,19 +112,35 @@ Description: Hebrew scripture text classes (Bible, Mishnah, Talmud, Zohar)
  Institute's Hebrew text corpus. Reads its text from scriptures-data.
 
 Package: scriptures-data
-Version: 0.15
+Version: 0.18
 Architecture: all
 Maintainer: Reuben Institute <robert.wallner.edward@gmail.com>
 Depends: python3
-Filename: ./scriptures-data_0.15_all.deb
-Size: 8204198
-MD5sum: a4f9d2f3c0122191d411601923ce7faf
-SHA1: 62e0124e9a32ba6f74c60d6988937391449a6f05
-SHA256: dd1598402abb311a37ac5fa2b5e12a3260b285ef1c85cc808406a57e93710110
+Filename: ./scriptures-data_0.18_all.deb
+Size: 8205866
+MD5sum: d75f10472db92e1a39cae03a6e188718
+SHA1: ba61c2fa8e8d4407c396ff7de8ae9d288260de2d
+SHA256: e0dbf3fbf4cb50591612185ab125ad4ff1e608405ccb2d738df8d1b95c2eb536
 Section: python
 Priority: optional
 Description: Hebrew scripture text data (Bible, Mishnah, Talmud, Zohar)
  Provides the JSON text database at /usr/share/scriptures, sourced
  from Sefaria, along with the Source class and Source command used
  to rebuild it.
+
+Package: scriptures-web
+Version: 0.18
+Architecture: all
+Maintainer: Reuben Institute <robert.wallner.edward@gmail.com>
+Depends: python3, python3-flask, python3-scriptures, fonts
+Filename: ./scriptures-web_0.18_all.deb
+Size: 2690
+MD5sum: 58d7f312bd39ef0b575ff40fd1ffe2fa
+SHA1: 430178136757b08b59553e01871e62c164520c09
+SHA256: f2d8cc327106341fa8878d990b925f386b7f6a996df1815d77e6859eee8f54a2
+Section: python
+Priority: optional
+Description: Web viewer for the Reuben Institute scripture corpus
+ Flask app serving the Hebrew scripture texts in the browser, with
+ the Institute's fonts. Provides the scriptures-web command.
 
