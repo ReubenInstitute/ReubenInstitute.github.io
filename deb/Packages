@@ -111,6 +111,25 @@ Description: Hebrew scripture text classes (Bible, Mishnah, Talmud, Zohar)
  Zohar, ZoharChadash and ZoharTikkunim classes for Reuben Institute's
  Hebrew text corpus, with a bundled web viewer available separately.
 
+Package: python3-styledscriptures
+Version: 0.12
+Architecture: all
+Maintainer: Reuben Institute <reubeninstitute@gmail.com>
+Depends: python3, python3-hebrew, python3-pandas
+Filename: ./python3-styledscriptures_0.12_all.deb
+Size: 6054
+MD5sum: 2b24acc49a9e78814d2a3e5a1c107164
+SHA1: 39fe5bc757a0b03c45a4a5a89ad1a9a77c015807
+SHA256: b6f0e64df29a037592112b67605bd18634a2cf1d4220ac9b61d01e07484583cd
+Section: python
+Priority: optional
+Description: Classes for Reuben Institute's Psalms and Parashot text
+ Text, Psalms, and Parashot classes that present Reuben Institute's
+ own typesetting of the Psalms (as poetry) and Parashot (as narrative
+ prose), with print-quality typography (curly single/double quotes,
+ proper punctuation) — the same text across print, web app, and
+ social media video.
+
 Package: scriptures-data
 Version: 0.25
 Architecture: all
@@ -141,4 +160,22 @@ Section: python
 Priority: optional
 Description: Web viewer for Reuben Institute's scripture corpus
  Flask app serving the Hebrew scripture texts in the browser.
+
+Package: styledscriptures-data
+Version: 0.12
+Architecture: all
+Maintainer: Reuben Institute <reubeninstitute@gmail.com>
+Depends: python3
+Filename: ./styledscriptures-data_0.12_all.deb
+Size: 362714
+MD5sum: 937c2e413e81505af93d59991c3019aa
+SHA1: 36316c3c833ab842ad7f805b7bfa6d5a3e02ca52
+SHA256: ad0127795aa9fda5f5fdd602e557173f5ab609599e3e025dc7338c538b1d968e
+Section: python
+Priority: optional
+Description: Reuben Institute's Psalms and Parashot text
+ Markdown text and CSV metadata for Reuben Institute's own
+ typesetting of the Psalms (as poetry) and Parashot (as narrative
+ prose) — the text behind the print booklets, web app, and video
+ series.
 
