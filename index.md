@@ -145,6 +145,8 @@ Behind every video, app, and booklet sits a set of internal standards — how th
 
 ### [Code](Code.md)
 
+### [Log](Log.md)
+
 ---
 
 ## Dev Lab

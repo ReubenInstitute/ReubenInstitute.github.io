@@ -1,45 +1,6 @@
 # Dev Lab
 
-## Glossary
-
-* **Chainsaw massacre** — complete ground-up refactor, nothing sacred, everything gets cut and rebuilt correctly from scratch
-* **MOAB** (Mother of All Bombs) — when the chainsaw isn't enough, we switch languages or platforms entirely and rebuild from zero; nuclear option
-* **Labeled scar** — a workaround for a missing feature or quirk of a language, platform, or tool; isolated and explicitly named so the clean design remains visible next to it, never hidden inside it
-
-## Guidelines
-
-### Code
-
-* Use **tabs** for indentation, never spaces.
-* Do **not** use extra spaces inside code to visually align values — alignment is the job of indentation, not spacing.
-* **No comments or docstrings** — the code must be self‑documenting through clear naming.
-* **Blank lines** separate different blocks of code (imports, defines, functions, classes). They are **not** used inside a block to visually break up logic — that belongs in the viewer, not the source.
-* Keep `if` statements on separate lines with proper indentation; never cram them onto a single line.
-* Outside Python, single‑line `if` bodies are written without surrounding braces — the line break alone ends the block.
-* Variable names are **full words** (`controller`, `player`, `eventHandler`), **no abbreviations**.
-* Single letter variables are acceptable for very short‑lived (a few lines) or obvious temporary variables (`n`, `s`, `e`), but avoid mixing many of them.
-* "Know the rules well, so you can break them effectively."
-
-### Markdown
-
-* Use asterisk for bulletpoint character
-* Use proper markdown headers (`#`, `##`)
-
-### Log
-
-#### Full entry
-
-* Narrative tone, diary-like
-* First person plural ("we") for decisions and actions; passive voice for the code, system, or hardware itself
-* Chronological order within the session — the sequence of decisions matters
-* Log everything including abandoned work — the fact that something was tried and dropped is as important as what was kept
-* The human experience is part of the record — frustration, dead ends, moments of madness, not sanitized away
-* Language exemption — profanity and slang permitted when it reflects the real emotional register of the session
-
-#### Index entry
-
-* Every detail from the full entry, nothing omitted — not a summary
-* No narration, no connective tissue, no unnecessary words — lossless compression, not lossy summarization
+Entries follow the conventions in [Log.md](../Log.md), and the code they describe follows [Code.md](../Code.md).
 
 ## Tags
 
