@@ -48,6 +48,7 @@ PACKAGES = [
     {"name": "audiobible-darkknox2-english", "deb_pkgs": ["audiobible-darkknox2-english"], "pip": False},
     {"name": "audiobible-titles", "deb_pkgs": ["audiobible-titles"], "pip": False},
     {"name": "AudioBible", "deb_pkgs": ["audiobible-web"], "pip": False},
+    {"name": "ScripturesStudio-assets", "deb_pkgs": ["scripturesstudio-assets"], "pip": False},
 ]
 
 
