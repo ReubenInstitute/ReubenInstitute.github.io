@@ -155,7 +155,7 @@ The Institute builds in the open— every breakthrough, false start, and late‑
 
 We studied and corrected Hebrew and Aramaic texts. We wrote and refactored software libraries for text, calendar, astronomy, media, and typography. We produced and published audio and video content. We built and tested hardware prototypes for a clock. We built a print-generation pipeline and produced calendar and planner pages from our own engine. We designed the Institute’s brand and enforced its rules, including the Shabbat lock and public logging. We did not just plan any of this. We built it, broke it, fixed it, and shipped the whole operation.
 
-Meet our [Team](Team.md), see our full [Dev Lab logs](log/log.md), and see who are we [Following](Following.md).
+Meet our [Team](Team.md), see our full [Dev Lab logs](log/log.md) (written per [Log.md](Log.md)), and see who are we [Following](Following.md).
 
 ---
 

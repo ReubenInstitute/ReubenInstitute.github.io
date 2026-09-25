@@ -1,6 +1,6 @@
 # Dev Lab
 
-Entries follow the conventions in [Log.md](../Log.md), and the code they describe follows [Code.md](../Code.md).
+Entries follow the conventions in [Log.md](../Log.md).
 
 ## Tags
 
