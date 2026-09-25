@@ -19,6 +19,7 @@ import argparse
 import hashlib
 import shutil
 import subprocess
+import sys
 from pathlib import Path
 
 PAGES_ROOT = Path(__file__).resolve().parent
@@ -67,6 +68,24 @@ def normalize(name):
     return re.sub(r"[-_.]+", "-", name).lower()
 
 
+def source_version(pkg):
+    control_dir = pkg["source"] / "packaging" / "deb"
+    control_file = control_dir / "control"
+    if not control_file.exists():
+        control_file = control_dir / f"control-{normalize(pkg['name'])}"
+    for line in control_file.read_text().splitlines():
+        if line.startswith("Version:"):
+            return line.split(":", 1)[1].strip()
+    sys.exit(f"no Version line in {control_file}")
+
+
+def published_version(pkg):
+    matches = list(DEB_DIR.glob(f"{pkg['deb_pkgs'][0]}_*_all.deb"))
+    if not matches:
+        return None
+    return matches[0].name.removeprefix(f"{pkg['deb_pkgs'][0]}_").removesuffix("_all.deb")
+
+
 def build_deb(pkg):
     for deb_pkg in pkg["deb_pkgs"]:
         for old in pkg["source"].glob(f"{deb_pkg}_*_all.deb"):
@@ -81,15 +100,18 @@ def build_deb(pkg):
     return debs
 
 
-def build_sdist(pkg):
+def build_dist(pkg):
     dist = pkg["source"] / "dist"
     if dist.exists():
         shutil.rmtree(dist)
-    run([sys.executable, "-m", "build", "--sdist"], cwd=pkg["source"])
+    run([sys.executable, "-m", "build"], cwd=pkg["source"])
     sdists = sorted(dist.glob("*.tar.gz"))
+    wheels = sorted(dist.glob("*.whl"))
     if not sdists:
         sys.exit(f"no sdist produced for {pkg['name']}")
-    return sdists[-1]
+    if not wheels:
+        sys.exit(f"no wheel produced for {pkg['name']}")
+    return [sdists[-1], wheels[-1]]
 
 
 def place_deb(pkg, deb_paths):
@@ -103,15 +125,18 @@ def place_deb(pkg, deb_paths):
         print(f"placed {dest}")
 
 
-def place_sdist(pkg, sdist_path):
+def place_dist(pkg, dist_paths):
     proj_dir = PIP_DIR / normalize(pkg["name"])
     proj_dir.mkdir(parents=True, exist_ok=True)
-    for old in proj_dir.glob("*.tar.gz"):
+    for old in list(proj_dir.glob("*.tar.gz")) + list(proj_dir.glob("*.whl")):
         old.unlink()
-    dest = proj_dir / sdist_path.name
-    shutil.copy2(sdist_path, dest)
-    print(f"placed {dest}")
-    return dest
+    dests = []
+    for dist_path in dist_paths:
+        dest = proj_dir / dist_path.name
+        shutil.copy2(dist_path, dest)
+        print(f"placed {dest}")
+        dests.append(dest)
+    return dests
 
 
 def sha256_of(path):
@@ -138,14 +163,13 @@ def rebuild_apt_index():
          "--default-key", GPG_KEYID, "--clearsign", "-o", "InRelease", "Release"], cwd=DEB_DIR)
 
 
-def write_project_index(name, sdist_dest):
-    proj_dir = sdist_dest.parent
-    digest = sha256_of(sdist_dest)
-    html = (
-        "<!DOCTYPE html>\n<html><body>\n"
-        f'<a href="{sdist_dest.name}#sha256={digest}">{sdist_dest.name}</a>\n'
-        "</body></html>\n"
+def write_project_index(name, dist_dests):
+    proj_dir = dist_dests[0].parent
+    links = "\n".join(
+        f'<a href="{dest.name}#sha256={sha256_of(dest)}">{dest.name}</a>'
+        for dest in dist_dests
     )
+    html = f"<!DOCTYPE html>\n<html><body>\n{links}\n</body></html>\n"
     (proj_dir / "index.html").write_text(html)
 
 
@@ -183,12 +207,15 @@ def main():
     try:
         for pkg in PACKAGES:
             print(f"=== {pkg['name']} ===")
+            if source_version(pkg) == published_version(pkg):
+                print(f"unchanged at {source_version(pkg)}, skipping")
+                continue
             deb_path = build_deb(pkg)
             place_deb(pkg, deb_path)
             if pkg.get("pip", True):
-                sdist_path = build_sdist(pkg)
-                dest = place_sdist(pkg, sdist_path)
-                write_project_index(pkg["name"], dest)
+                dist_paths = build_dist(pkg)
+                dests = place_dist(pkg, dist_paths)
+                write_project_index(pkg["name"], dests)
     finally:
         write_root_index()
         rebuild_apt_index()
