@@ -3,10 +3,10 @@ Version: 0.8
 Architecture: all
 Maintainer: Reuben Institute <reubeninstitute@gmail.com>
 Filename: ./fonts_0.8_all.deb
-Size: 4993568
-MD5sum: 33620a0250793618c8308327083da9ab
-SHA1: 73ae1f934b012432f455cd9be24810bb8227b9ea
-SHA256: 4417c5997ac6893642b32cb53a0bafe902d5f1eb8758cd6537d99088b924383f
+Size: 4993756
+MD5sum: 69dfc48182ed9cb90d68f4f3503e17f0
+SHA1: 16c2ec83688bcca07b25da2279600a052db22958
+SHA256: 85ae920545132a4abedb86a5ccde7027ea086f25e15effe8bf3c0a2daa2942a6
 Section: fonts
 Priority: optional
 Description: Fonts used by Reuben Institute projects
@@ -19,10 +19,10 @@ Architecture: all
 Maintainer: Reuben Institute <reubeninstitute@gmail.com>
 Depends: python3, python3-date
 Filename: ./python3-astro_1.7_all.deb
-Size: 6852
-MD5sum: 0d31d7690610832914ef9a0210feec23
-SHA1: 93e249e16dafb895328eda6ca01e3deda5c9e0da
-SHA256: fad9339881ba2ef531616449ac009ce0d1b271428bb4cb95d2b0a007861f1ea2
+Size: 6846
+MD5sum: c544eaa13bd77b47ec1d147bdfea3d5f
+SHA1: 7f4a3a478d669ff51b6cf3dcc146f2c8d46e26c1
+SHA256: 0fd7ad3747a70330b87bfa123163cea4e9051168cf46fbdb56e31dc03772fa17
 Section: python
 Priority: optional
 Description: Astronomy utilities
@@ -35,10 +35,10 @@ Architecture: all
 Maintainer: Reuben Institute <reubeninstitute@gmail.com>
 Depends: python3
 Filename: ./python3-date_0.7_all.deb
-Size: 3038
-MD5sum: 3159cf3f85573d3625b0d28292a5be77
-SHA1: 9f1dbd47b6940bbd1299f2417cd0764caeaa5f8d
-SHA256: 7c5ac5ecb67467957b08fc7bb35955e5c2698e8af772d811e04bea8971edbbe2
+Size: 3032
+MD5sum: 3f7d7cb0775849d22a2ca0481257cb95
+SHA1: c673dc7d019efea80d3c7dc432c7d8dc0a457fec
+SHA256: bb0c8a4ea20dbcdba69399dcfeee1b5b5fc8212d42c06d9a3f9db690d58d2d39
 Section: python
 Priority: optional
 Description: Gregorian date/time utilities
@@ -51,10 +51,10 @@ Architecture: all
 Maintainer: Reuben Institute <reubeninstitute@gmail.com>
 Depends: python3, python3-regex
 Filename: ./python3-hebrew_1.11_all.deb
-Size: 5308
-MD5sum: 31e509882c5f161493159486d9ee6807
-SHA1: b91f8a1d4392ffdbd67956fe09651faa9f95bfa4
-SHA256: b377e7b9c921ea23c64773d6b756668f30a3219b5a1e0d1679afe88ad9a9a6b2
+Size: 5306
+MD5sum: c5a2ed37a46f6e57238d358dea778b1a
+SHA1: 7d0e8af9e378fae4eaaa244958499c0000e0c33f
+SHA256: d7cd203c5c74cd2f832e85046c6b60a3923d6bf5cec09ff4f4a4cfd63287f882
 Section: python
 Priority: optional
 Description: Hebrew text and numeral utilities
@@ -69,9 +69,9 @@ Maintainer: Reuben Institute <reubeninstitute@gmail.com>
 Depends: python3, python3-date
 Filename: ./python3-hebrewdate_3.7_all.deb
 Size: 9170
-MD5sum: 97c241f3004505d793367f994366ac31
-SHA1: c502618f2a2614852811cd79c3d9406efa145377
-SHA256: f0d33a332b4eed6c8a96d5305f8c54b74073d5b275a09f1ee20ecf5dc29c2a26
+MD5sum: 5e404363b90d42e154a9d8065ab1f15a
+SHA1: ee9e712f78eaaf854ddd048adf999c6625288011
+SHA256: 4eac813e7da8b3095df04123b33bed535c424b8078d5970f8b2f2eb295907969
 Section: python
 Priority: optional
 Description: Hebrew calendar utilities
@@ -84,10 +84,10 @@ Architecture: all
 Maintainer: Reuben Institute <reubeninstitute@gmail.com>
 Depends: python3, python3-date, python3-astro, python3-hebrewdate, python3-pil
 Filename: ./python3-hebrewyemama_0.7_all.deb
-Size: 11866
-MD5sum: 60009a1d8acece9ec37cdf6e97f1aaf8
-SHA1: 107be9a61d468ed97e538d0050f784b671d34bad
-SHA256: 582fb5bd4da9b5923af1c4636cdaaf655069040b58b8ecc33094d8cfbb69195d
+Size: 11864
+MD5sum: 031a6b3395f6757e817c77bd74f1b0f4
+SHA1: 1b571aa6a511e402e12c3306f3e798c265b16b36
+SHA256: 158db3407887bc8ce13acf6ee4dc88d03ac9c8ed418445914858f1962169949a
 Section: python
 Priority: optional
 Description: Halakhic day-division times and clock rendering
@@ -100,10 +100,10 @@ Architecture: all
 Maintainer: Reuben Institute <reubeninstitute@gmail.com>
 Depends: python3, python3-pandas, python3-hebrew, scriptures-data
 Filename: ./python3-scriptures_0.25_all.deb
-Size: 5084
-MD5sum: 62cac072e75cd68c0dd6460fc1c063e6
-SHA1: f76afd7c3d5769344b494f2636c9b59f788ddc4a
-SHA256: 7260945e76f974b04ada85f689f687ac2dc5c40b60f4e147fcb00fbd41f89ff4
+Size: 5088
+MD5sum: a0d16e4d97725073731078d43b83734a
+SHA1: 62fb4c3918f02d0715d1e107fd2c97fc32e1e2b7
+SHA256: 00f194d167b48eb9a8830e8cef1133d8f6891b68b3deab8177db9e814262a11c
 Section: python
 Priority: optional
 Description: Hebrew scripture text classes (Bible, Mishnah, Talmud, Zohar)
@@ -117,10 +117,10 @@ Architecture: all
 Maintainer: Reuben Institute <reubeninstitute@gmail.com>
 Depends: python3
 Filename: ./scriptures-data_0.25_all.deb
-Size: 8204470
-MD5sum: 1100616697fef686db68392786fde26e
-SHA1: c50ca2fb788b27695d56c98081b2c6044e91f687
-SHA256: 73a811e2f6fb244949a7d7d9ac070b6773308c752fe3a19e934a34b559a54a21
+Size: 8206476
+MD5sum: 92c576e5dddeca0315b6ffcdbbe1bb35
+SHA1: 8c192e29c0e8e5b1276e42d51df610fb21961088
+SHA256: 85ddaf17436c8c8ed23c85ffa3e1b7a11e8c88183c3c356a11ade8d5cda454e9
 Section: python
 Priority: optional
 Description: Hebrew scripture text data (Bible, Mishnah, Talmud, Zohar)
@@ -133,10 +133,10 @@ Architecture: all
 Maintainer: Reuben Institute <reubeninstitute@gmail.com>
 Depends: python3, python3-flask, python3-scriptures, fonts
 Filename: ./scriptures-web_0.25_all.deb
-Size: 2832
-MD5sum: b802e09e5d45ff07b16b020c9e71d151
-SHA1: 08e19011f985730f94f209eece1788ea76df6ad6
-SHA256: 760fdcc90807855655908b135f5c0deac49741e58e29bacbb28ccd08081e3842
+Size: 2836
+MD5sum: 5eee0fcc8a66e69c7954f7a0df776c92
+SHA1: 6020511fb59ad4a2198b01511fc17507fce8c613
+SHA256: edef8e85fe551e21fb969abc27cf4e5c113e1e29e131f95478eaa5e347898188
 Section: python
 Priority: optional
 Description: Web viewer for Reuben Institute's scripture corpus
