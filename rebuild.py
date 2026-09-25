@@ -39,6 +39,7 @@ PACKAGES = [
     {"name": "HebrewDate", "deb_pkgs": ["python3-hebrewdate"]},
     {"name": "HebrewYemama", "deb_pkgs": ["python3-hebrewyemama"]},
     {"name": "Scriptures", "deb_pkgs": ["python3-scriptures", "scriptures-data", "scriptures-web"]},
+    {"name": "StyledScriptures", "deb_pkgs": ["python3-styledscriptures", "styledscriptures-data"]},
     {"name": "Fonts", "deb_pkgs": ["fonts"], "pip": False},
 ]
 
