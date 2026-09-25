@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Rebuild the /deb and /pip/simple package repos from their source repos.
+"""Rebuild the deb-repository and pip-repository package repos from their source repos.
 
-By default, fetches every package into ~/.cache/reubeninstitute, `git
-pull`ing each one to the latest commit (cloning it first if missing) — no
-local setup required:
+By default, fetches every package (and the two destination repos) into
+~/.cache/reubeninstitute, `git pull`ing each to the latest commit (cloning
+first if missing) — no local setup required:
 
     python3 rebuild.py
 
@@ -12,8 +12,8 @@ cloning, so it stays entirely under your own control:
 
     python3 rebuild.py /root/WORK  # reuses /root/WORK/<name> as-is
 
-Run this from inside the ReubenInstitute.github.io checkout. It does not
-touch this repo's git — commit and push it yourself afterward.
+It does not touch git — commit and push deb-repository and pip-repository
+yourself afterward.
 """
 import argparse
 import hashlib
@@ -22,12 +22,9 @@ import subprocess
 import sys
 from pathlib import Path
 
-PAGES_ROOT = Path(__file__).resolve().parent
-DEB_DIR = PAGES_ROOT / "deb"
-PIP_DIR = PAGES_ROOT / "pip" / "simple"
-GPG_KEYID = "807CCC20F26CFF08"
 GITHUB_ORG = "https://github.com/ReubenInstitute"
 DEFAULT_CLONE_BASE = Path.home() / ".cache" / "reubeninstitute"
+GPG_KEYID = "807CCC20F26CFF08"
 
 # name: pip/PEP503 project name (as in pyproject.toml [project] name), and the
 # repo name under github.com/ReubenInstitute
@@ -53,14 +50,17 @@ PACKAGES = [
 ]
 
 
-def resolve_source(pkg, clone_base):
-    name = pkg["name"]
+def resolve_repo(name, clone_base):
     existing = clone_base / name
     if existing.is_dir():
         run(["git", "pull"], cwd=existing)
         return existing
     run(["git", "clone", f"{GITHUB_ORG}/{name}.git", str(existing)])
     return existing
+
+
+def resolve_source(pkg, clone_base):
+    return resolve_repo(pkg["name"], clone_base)
 
 
 def use_as_is(pkg, folder):
@@ -82,7 +82,7 @@ def source_version(pkg):
     control_dir = pkg["source"] / "packaging" / "deb"
     control_file = control_dir / "control"
     if not control_file.exists():
-        control_file = control_dir / f"control-{normalize(pkg['name'])}"
+        control_file = next(control_dir.glob("control-*"))
     for line in control_file.read_text().splitlines():
         if line.startswith("Version:"):
             return line.split(":", 1)[1].strip()
@@ -96,7 +96,26 @@ def published_version(pkg):
     return matches[0].name.removeprefix(f"{pkg['deb_pkgs'][0]}_").removesuffix("_all.deb")
 
 
+def content_hash(pkg):
+    # Hash of tracked file paths+blobs, excluding packaging/ (control/version
+    # metadata) and .git — reflects only the actual packaged payload, so a
+    # version bump or control-file edit alone doesn't count as a change.
+    result = subprocess.run(
+        ["git", "ls-tree", "-r", "HEAD"],
+        cwd=pkg["source"], check=True, capture_output=True, text=True,
+    )
+    lines = [l for l in result.stdout.splitlines() if "\tpackaging/" not in l]
+    return hashlib.sha256("\n".join(sorted(lines)).encode()).hexdigest()
+
+
 def build_deb(pkg):
+    hash_file = pkg["source"] / ".payload-hash"
+    current_hash = content_hash(pkg)
+    existing = [next(iter(pkg["source"].glob(f"{deb_pkg}_*_all.deb")), None) for deb_pkg in pkg["deb_pkgs"]]
+    if hash_file.exists() and hash_file.read_text().strip() == current_hash and all(existing):
+        print(f"payload unchanged, reusing {', '.join(d.name for d in existing)}")
+        return existing
+
     for deb_pkg in pkg["deb_pkgs"]:
         for old in pkg["source"].glob(f"{deb_pkg}_*_all.deb"):
             old.unlink()
@@ -107,6 +126,7 @@ def build_deb(pkg):
         if len(matches) != 1:
             sys.exit(f"expected exactly one .deb for {deb_pkg}, got {matches}")
         debs.append(matches[0])
+    hash_file.write_text(current_hash)
     return debs
 
 
@@ -191,8 +211,10 @@ def write_root_index():
 
 
 def main():
+    global DEB_DIR, PIP_DIR
+
     parser = argparse.ArgumentParser(
-        description="Rebuild the /deb and /pip/simple package repos from their source repos.")
+        description="Rebuild the deb-repository and pip-repository package repos from their source repos.")
     parser.add_argument("folder", nargs="?", type=Path,
         help="use these clones as-is, no pulling or cloning")
     parser.add_argument("--clear-cache", action="store_true",
@@ -209,10 +231,14 @@ def main():
     if args.folder:
         for pkg in PACKAGES:
             pkg["source"] = use_as_is(pkg, args.folder)
+        DEB_DIR = args.folder / "deb-repository"
+        PIP_DIR = args.folder / "pip-repository" / "simple"
     else:
         DEFAULT_CLONE_BASE.mkdir(parents=True, exist_ok=True)
         for pkg in PACKAGES:
             pkg["source"] = resolve_source(pkg, DEFAULT_CLONE_BASE)
+        DEB_DIR = resolve_repo("deb-repository", DEFAULT_CLONE_BASE)
+        PIP_DIR = resolve_repo("pip-repository", DEFAULT_CLONE_BASE) / "simple"
 
     try:
         for pkg in PACKAGES:
@@ -230,7 +256,7 @@ def main():
         write_root_index()
         rebuild_apt_index()
 
-    print("Done. Review changes, then commit and push this repo.")
+    print(f"Done. Review changes, then commit and push {DEB_DIR} and {PIP_DIR.parent}.")
 
 
 if __name__ == "__main__":
