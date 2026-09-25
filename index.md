@@ -113,19 +113,25 @@ A small, jewel‑like volume whose Aramaic title promises something precious. Wi
 
 ## Libraries
 
-A suite of free software code packages released by the Institute, each one solving a narrow problem cleanly. They cover Hebrew text parsing, calendar and astronomical calculations, geometry, and even sensor‑data handling — the quiet, reusable building blocks that power the apps, the clock, and the production studio. Useful on their own, but best understood as the Institute's technical infrastructure with the lid off.
+Free software code packages released by us — reusable building blocks that power the apps, web, and products.
 
-### [Scriptures](libs/Scriptures.md)
+### Scriptures
+Hebrew scripture text classes (Bible, Mishnah, Talmud, Zohar) for navigating the Hebrew text corpus, with a bundled web viewer for browsing the texts.
 
-### [Date](libs/Date.md)
+### Date
+Gregorian date/time utilities (Date, Time, DateTime) for Gregorian calendar and Julian day calculations.
 
-### [Hebrew](libs/Hebrew.md)
+### Hebrew
+Hebrew text and numeral utilities — letter constants, transliteration helpers, and Hebrew numeral (gematria) conversion.
 
-### [HebrewDate](libs/HebrewDate.md)
+### HebrewDate
+Hebrew calendar utilities — dates, holidays, and Torah reading schedule.
 
-### [HebrewYemama](libs/HebrewYemama.md)
+### HebrewYemama
+Halakhic day-division times (yemama), clock rendering, and custom day-definitions.
 
-### [Astro](libs/Astro.md)
+### Astro
+Astronomy utilities for celestial location, sun/moon position calculations, and geo coordinates.
 
 ---
 
