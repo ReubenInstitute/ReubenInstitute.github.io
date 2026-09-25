@@ -1,33 +1,51 @@
 #!/usr/bin/env python3
 """Rebuild the /deb and /pip/simple package repos from their source repos.
 
-Run this from inside the ReubenInstitute.github.io checkout after pushing
-changes to a package's source repo. It does not touch git — commit and push
-this repo yourself afterward.
+By default, fetches every package fresh from GitHub into a temporary
+directory — no local setup required. Pass a directory as the first argument
+to reuse existing clones there instead (each is `git pull`ed to update):
+
+    python3 rebuild.py            # clones everything fresh
+    python3 rebuild.py /root/WORK # reuses /root/WORK/<name> if present
+
+Run this from inside the ReubenInstitute.github.io checkout. It does not
+touch this repo's git — commit and push it yourself afterward.
 """
 import hashlib
 import shutil
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
 
 PAGES_ROOT = Path(__file__).resolve().parent
 DEB_DIR = PAGES_ROOT / "deb"
 PIP_DIR = PAGES_ROOT / "pip" / "simple"
 GPG_KEYID = "807CCC20F26CFF08"
+GITHUB_ORG = "https://github.com/ReubenInstitute"
 
-# name: pip/PEP503 project name (as in pyproject.toml [project] name)
-# source: local clone of the package's own repo
+# name: pip/PEP503 project name (as in pyproject.toml [project] name), and the
+# repo name under github.com/ReubenInstitute
 # deb_pkgs: Debian package name(s) built by packaging/deb/build.sh (as in packaging/deb/control*)
 PACKAGES = [
-    {"name": "Hebrew", "source": Path("/root/WORK/Hebrew"), "deb_pkgs": ["python3-hebrew"]},
-    {"name": "Date", "source": Path("/root/WORK/Date"), "deb_pkgs": ["python3-date"]},
-    {"name": "Astro", "source": Path("/root/WORK/Astro"), "deb_pkgs": ["python3-astro"]},
-    {"name": "HebrewDate", "source": Path("/root/WORK/HebrewDate"), "deb_pkgs": ["python3-hebrewdate"]},
-    {"name": "HebrewYemama", "source": Path("/root/WORK/HebrewYemama"), "deb_pkgs": ["python3-hebrewyemama"]},
-    {"name": "Scriptures", "source": Path("/root/WORK/Scriptures"), "deb_pkgs": ["python3-scriptures", "scriptures-data", "scriptures-web"]},
-    {"name": "Fonts", "source": Path("/root/WORK/Fonts"), "deb_pkgs": ["fonts"], "pip": False},
+    {"name": "Hebrew", "deb_pkgs": ["python3-hebrew"]},
+    {"name": "Date", "deb_pkgs": ["python3-date"]},
+    {"name": "Astro", "deb_pkgs": ["python3-astro"]},
+    {"name": "HebrewDate", "deb_pkgs": ["python3-hebrewdate"]},
+    {"name": "HebrewYemama", "deb_pkgs": ["python3-hebrewyemama"]},
+    {"name": "Scriptures", "deb_pkgs": ["python3-scriptures", "scriptures-data", "scriptures-web"]},
+    {"name": "Fonts", "deb_pkgs": ["fonts"], "pip": False},
 ]
+
+
+def resolve_source(pkg, clone_base):
+    name = pkg["name"]
+    existing = clone_base / name
+    if existing.is_dir():
+        run(["git", "pull"], cwd=existing)
+        return existing
+    run(["git", "clone", f"{GITHUB_ORG}/{name}.git", str(existing)])
+    return existing
 
 
 def run(cmd, cwd=None):
@@ -131,14 +149,21 @@ def write_root_index():
 
 
 def main():
-    for pkg in PACKAGES:
-        print(f"=== {pkg['name']} ===")
-        deb_path = build_deb(pkg)
-        place_deb(pkg, deb_path)
-        if pkg.get("pip", True):
-            sdist_path = build_sdist(pkg)
-            dest = place_sdist(pkg, sdist_path)
-            write_project_index(pkg["name"], dest)
+    if len(sys.argv) > 2:
+        sys.exit(f"usage: {sys.argv[0]} [clone-base-dir]")
+    clone_base = Path(sys.argv[1]) if len(sys.argv) == 2 else None
+
+    with tempfile.TemporaryDirectory(prefix="rebuild-src-") as tmp:
+        base = clone_base if clone_base else Path(tmp)
+        for pkg in PACKAGES:
+            print(f"=== {pkg['name']} ===")
+            pkg["source"] = resolve_source(pkg, base)
+            deb_path = build_deb(pkg)
+            place_deb(pkg, deb_path)
+            if pkg.get("pip", True):
+                sdist_path = build_sdist(pkg)
+                dest = place_sdist(pkg, sdist_path)
+                write_project_index(pkg["name"], dest)
 
     write_root_index()
     rebuild_apt_index()
