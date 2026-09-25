@@ -117,21 +117,15 @@ A suite of free software code packages released by the Institute, each one solvi
 
 ### [Scriptures](libs/Scriptures.md)
 
-### [ScripturesAudio](libs/ScripturesAudio.md)
-
 ### [Date](libs/Date.md)
 
 ### [Hebrew](libs/Hebrew.md)
 
 ### [HebrewDate](libs/HebrewDate.md)
 
-### [Algebra](libs/Algebra.md)
+### [HebrewYemama](libs/HebrewYemama.md)
 
 ### [Astro](libs/Astro.md)
-
-### [Geo](libs/Geo.md)
-
-### [Sensors](libs/Sensors.md)
 
 ---
 
