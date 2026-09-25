@@ -38,6 +38,7 @@ PACKAGES = [
     {"name": "Astro", "deb_pkgs": ["python3-astro"]},
     {"name": "HebrewDate", "deb_pkgs": ["python3-hebrewdate"]},
     {"name": "HebrewYemama", "deb_pkgs": ["python3-hebrewyemama"]},
+    {"name": "MediaTools", "deb_pkgs": ["python3-mediatools"]},
     {"name": "Scriptures", "deb_pkgs": ["python3-scriptures", "scriptures-data", "scriptures-web"]},
     {"name": "StyledScriptures", "deb_pkgs": ["python3-styledscriptures", "styledscriptures-data", "styledscriptures-web"]},
     {"name": "Fonts", "deb_pkgs": ["fonts"], "pip": False},
