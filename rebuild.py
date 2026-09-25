@@ -1,21 +1,24 @@
 #!/usr/bin/env python3
 """Rebuild the /deb and /pip/simple package repos from their source repos.
 
-By default, fetches every package fresh from GitHub into a temporary
-directory — no local setup required. Pass a directory as the first argument
-to reuse existing clones there instead (each is `git pull`ed to update):
+By default, fetches every package into ~/.cache/reubeninstitute, `git
+pull`ing each one to the latest commit (cloning it first if missing) — no
+local setup required:
 
-    python3 rebuild.py            # clones everything fresh
-    python3 rebuild.py /root/WORK # reuses /root/WORK/<name> if present
+    python3 rebuild.py
+
+Pass a folder to use instead: it's used exactly as-is, no pulling or
+cloning, so it stays entirely under your own control:
+
+    python3 rebuild.py /root/WORK  # reuses /root/WORK/<name> as-is
 
 Run this from inside the ReubenInstitute.github.io checkout. It does not
 touch this repo's git — commit and push it yourself afterward.
 """
+import argparse
 import hashlib
 import shutil
 import subprocess
-import sys
-import tempfile
 from pathlib import Path
 
 PAGES_ROOT = Path(__file__).resolve().parent
@@ -23,6 +26,7 @@ DEB_DIR = PAGES_ROOT / "deb"
 PIP_DIR = PAGES_ROOT / "pip" / "simple"
 GPG_KEYID = "807CCC20F26CFF08"
 GITHUB_ORG = "https://github.com/ReubenInstitute"
+DEFAULT_CLONE_BASE = Path.home() / ".cache" / "reubeninstitute"
 
 # name: pip/PEP503 project name (as in pyproject.toml [project] name), and the
 # repo name under github.com/ReubenInstitute
@@ -46,6 +50,10 @@ def resolve_source(pkg, clone_base):
         return existing
     run(["git", "clone", f"{GITHUB_ORG}/{name}.git", str(existing)])
     return existing
+
+
+def use_as_is(pkg, folder):
+    return folder / pkg["name"]
 
 
 def run(cmd, cwd=None):
@@ -149,24 +157,42 @@ def write_root_index():
 
 
 def main():
-    if len(sys.argv) > 2:
-        sys.exit(f"usage: {sys.argv[0]} [clone-base-dir]")
-    clone_base = Path(sys.argv[1]) if len(sys.argv) == 2 else None
+    parser = argparse.ArgumentParser(
+        description="Rebuild the /deb and /pip/simple package repos from their source repos.")
+    parser.add_argument("folder", nargs="?", type=Path,
+        help="use these clones as-is, no pulling or cloning")
+    parser.add_argument("--clear-cache", action="store_true",
+        help=f"delete {DEFAULT_CLONE_BASE} and exit")
+    args = parser.parse_args()
 
-    with tempfile.TemporaryDirectory(prefix="rebuild-src-") as tmp:
-        base = clone_base if clone_base else Path(tmp)
+    if args.clear_cache:
+        if args.folder:
+            parser.error("--clear-cache cannot be combined with a folder")
+        shutil.rmtree(DEFAULT_CLONE_BASE, ignore_errors=True)
+        print(f"Removed {DEFAULT_CLONE_BASE}")
+        return
+
+    if args.folder:
+        for pkg in PACKAGES:
+            pkg["source"] = use_as_is(pkg, args.folder)
+    else:
+        DEFAULT_CLONE_BASE.mkdir(parents=True, exist_ok=True)
+        for pkg in PACKAGES:
+            pkg["source"] = resolve_source(pkg, DEFAULT_CLONE_BASE)
+
+    try:
         for pkg in PACKAGES:
             print(f"=== {pkg['name']} ===")
-            pkg["source"] = resolve_source(pkg, base)
             deb_path = build_deb(pkg)
             place_deb(pkg, deb_path)
             if pkg.get("pip", True):
                 sdist_path = build_sdist(pkg)
                 dest = place_sdist(pkg, sdist_path)
                 write_project_index(pkg["name"], dest)
+    finally:
+        write_root_index()
+        rebuild_apt_index()
 
-    write_root_index()
-    rebuild_apt_index()
     print("Done. Review changes, then commit and push this repo.")
 
 
