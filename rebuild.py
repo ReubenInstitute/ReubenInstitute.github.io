@@ -41,6 +41,11 @@ PACKAGES = [
     {"name": "Scriptures", "deb_pkgs": ["python3-scriptures", "scriptures-data", "scriptures-web"]},
     {"name": "StyledScriptures", "deb_pkgs": ["python3-styledscriptures", "styledscriptures-data"]},
     {"name": "Fonts", "deb_pkgs": ["fonts"], "pip": False},
+    {"name": "audiobible-shmueloff-source", "deb_pkgs": ["audiobible-shmueloff-source"], "pip": False},
+    {"name": "audiobible-shmueloff-original", "deb_pkgs": ["audiobible-shmueloff-original"], "pip": False},
+    {"name": "audiobible-shmueloff-darkknox2", "deb_pkgs": ["audiobible-shmueloff-darkknox2"], "pip": False},
+    {"name": "audiobible-darkknox2-english", "deb_pkgs": ["audiobible-darkknox2-english"], "pip": False},
+    {"name": "audiobible-titles", "deb_pkgs": ["audiobible-titles"], "pip": False},
 ]
 
 
