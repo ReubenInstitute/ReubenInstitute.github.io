@@ -1,8 +1,8 @@
-# Log
+# Logs
 
-These are the guidelines for the structure and style of a Dev Lab session's log entry.
+Guidelines for Dev Lab session entries and log index maintenance.
 
-## Full entry
+## Full Entry
 
 * The entry should read as a narrative, diary-like account
 * Decisions and actions should be described in the first person plural ("we")
@@ -19,6 +19,12 @@ These are the guidelines for the structure and style of a Dev Lab session's log 
 
 * The index entry should carry every detail from the full entry, with nothing omitted, and should not read as a summary
 * The index entry should read as lossless compression, not lossy summarization — no narration, no connective tissue, no unnecessary words
+
+## Log Index Distillation
+
+The distillation method compresses logs into high-signal context while preserving chronological structure and narrative style. The process begins by working backward from the latest entry to the earliest, performing in-place cleanup. Obsolete file names, class names, and route structures are retroactively updated to match present architecture. Transient noise is scrubbed: commit SHAs, temporary test ports, editorial play-by-play, and emotional meta-commentary. All core decisions, technical rationale, and failed approaches are retained.
+
+On top of content distillation, a second pass applies telegraphic rewrite. Articles, copulas, auxiliaries, predictable pronouns, politeness words, and repeated subjects are dropped. Negation, modality, conditionals, causality, scope, sequence, and contrast are preserved. Fragments and semicolons are used; arrows (→) and semantic tags (Rule:, Open:, Rejected:, Fix:, Decision:) are employed. Present tense and active voice are maintained. Canonical names only; exact numbers, paths, and commands; no synonyms. The second stage follows the first—compressing first results in loss of needed content.
 
 ## Glossary
 

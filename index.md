@@ -145,7 +145,7 @@ Behind every video, app, and booklet sits a set of internal standards — how th
 
 ### [Code](standards/Code.md)
 
-### [LogFormat](standards/LogFormat.md)
+### [Logs](standards/Logs.md)
 
 ---
 
@@ -153,7 +153,7 @@ Behind every video, app, and booklet sits a set of internal standards — how th
 
 The Institute builds in the open— every breakthrough, false start, and late‑night refactor— is public, updated session by session. It’s not a polished report; it’s the raw, honest chronicle of how we work, warts and all. No commercial secrets, nothing hidden— just a transparent, running record of what we’re building and why.
 
-Meet our [Team](Team.md), see our full [Dev Lab logs](log/log.md) (written per [LogFormat.md](standards/LogFormat.md)), and see who are we [Following](Following.md).
+Meet our [Team](Team.md), see our [Dev Lab logs](log/log-distilled.md) ([non-distilled](log/log.md)) (written per [Logs.md](standards/Logs.md)), and see who are we [Following](Following.md).
 
 ---
 
