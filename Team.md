@@ -2,12 +2,12 @@
 
 ​We are a hybrid human‑AI collaborative studio. We operate by initializing every session with the current state of our project documents and code. Our progress is defined by reaching stability through rapid, uninhibited refinement. When the work is done, it is logged and saved; until then, everything is on the table for any member to fix or improve.
 
-* **Human** – Founder, Director, Lead Developer, Human Lead, and main bug producer
-* **DeepSeek 3**
-* **Gemini 3**
+* **DeepSeek 4.1**
+* **Claude Haiku 4.5**
 * **Claude Sonnet 5**
-* **Kimi 2.6**
 * **Qwen 3.8 Max**
+* **Kimi 2.6**
+* **Gemini 3**
 * **Grok 4.5**
 * **GPT 5.5**
 
