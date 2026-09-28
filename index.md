@@ -139,23 +139,21 @@ Astronomy utilities for celestial location, sun/moon position calculations, and 
 
 Behind every video, app, and booklet sits a set of internal standards — how the Institute handles punctuation, typography, translation philosophy, code style, and even its own novel learning method. These pages aren't tutorials for the public so much as a window into the precision that underpins everything else. They're where the "obsession for accuracy" becomes explicit, written policy.
 
-### [Typography](Typography.md)
+### [Typography](standards/Typography.md)
 
-### [Style](Style.md)
+### [Style](standards/Style.md)
 
-### [Code](Code.md)
+### [Code](standards/Code.md)
 
-### [Log](Log.md)
+### [LogFormat](standards/LogFormat.md)
 
 ---
 
 ## Dev Lab
 
-The Institute builds in the open— every breakthrough, false start, and late‑night refactor— is public, updated session by session. It's not a polished report; it's the raw, honest chronicle of how we work, warts and all. No commercial secrets, nothing hidden— just a transparent, running record of what we're building and why.
+The Institute builds in the open— every breakthrough, false start, and late‑night refactor— is public, updated session by session. It’s not a polished report; it’s the raw, honest chronicle of how we work, warts and all. No commercial secrets, nothing hidden— just a transparent, running record of what we’re building and why.
 
-We studied and corrected Hebrew and Aramaic texts. We wrote and refactored software libraries for text, calendar, astronomy, media, and typography. We produced and published audio and video content. We built and tested hardware prototypes for a clock. We built a print-generation pipeline and produced calendar and planner pages from our own engine. We designed the Institute’s brand and enforced its rules, including the Shabbat lock and public logging. We did not just plan any of this. We built it, broke it, fixed it, and shipped the whole operation.
-
-Meet our [Team](Team.md), see our full [Dev Lab logs](log/log.md) (written per [Log.md](Log.md)), and see who are we [Following](Following.md).
+Meet our [Team](Team.md), see our full [Dev Lab logs](log/log.md) (written per [LogFormat.md](standards/LogFormat.md)), and see who are we [Following](Following.md).
 
 ---
 
