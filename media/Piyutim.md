@@ -12,7 +12,7 @@ All content adheres to the Institute’s textual standards and the same audio‑
 
 This liturgical poem was composed by the Kabbalists of Safed in the late 16th or early 17th century. It is based on a Talmudic legend (Shabbat 119b) which teaches that two ministering angels—one good and one evil—accompany every person home from the synagogue on Friday night. The song serves as a welcoming ceremony for these "angels of peace," greeting them, asking for their blessing, and eventually wishing them a peaceful departure. While the text is ancient, the slow, soulful melody most people sing today was actually composed in 1918 by an American rabbi named Israel Goldfarb. It is used today in almost every Jewish household to transition from the work week into the sanctity of Shabbat, sung immediately before the recitation of Kiddush.
 
-<audio controls src="https://raw.githubusercontent.com/ReubenInstitute/Media/main/piyutim/מלאכי השלום.mp3"></audio>
+<audio controls src="https://raw.githubusercontent.com/ReubenInstitute/Media-piyutim/main/MalacheiHaShalom.mp3"></audio>
 
 > שָׁלוֹם עֲלֵיכֶם מַלְאֲכֵי הַשָּׁרֵת מַלְאֲכֵי עֶלְיוֹן  
 > מִמֶּלֶךְ מַלְכֵי הַמְּלָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא  
@@ -27,7 +27,7 @@ This liturgical poem was composed by the Kabbalists of Safed in the late 16th or
 
 The lyrics are taken directly from Psalm 121. While the text is biblical (attributed to King David), it became a global hit in the modern era due to a hauntingly beautiful melody by Rabbi Shlomo Carlebach. It is used today as a song of comfort and faith during difficult times or at celebratory gatherings like weddings.
 
-<audio controls src="https://raw.githubusercontent.com/ReubenInstitute/Media/main/piyutim/אשא עיניי.mp3"></audio>
+<audio controls src="https://raw.githubusercontent.com/ReubenInstitute/Media-piyutim/main/EssaEinai.mp3"></audio>
 
 > שִׁיר לַמַּעֲלוֹת  
 >   
@@ -47,7 +47,7 @@ The lyrics are taken directly from Psalm 121. While the text is biblical (attrib
 
 The lyrics come from Psalm 133:1, and has dozens of modern melodies. It is the ultimate song of Jewish unity and is used today at almost every communal gathering, summer camp, or "Oneg Shabbat" to celebrate being together.
 
-<audio controls src="https://raw.githubusercontent.com/ReubenInstitute/Media/main/piyutim/הנה מה טוב.mp3"></audio>
+<audio controls src="https://raw.githubusercontent.com/ReubenInstitute/Media-piyutim/main/HinnehMahTov.mp3"></audio>
 
 > הִנֵּה מַה טּוֹב וּמַה נָּעִים  
 > שֶׁבֶת אַחִים גַּם יָחַד  
@@ -62,7 +62,7 @@ The lyrics come from Psalm 133:1, and has dozens of modern melodies. It is the u
 
 The definitive anthem of the Hanukkah season. Composed in 13th-century Germany by a poet named Mordechai—who signed his name into the first five stanzas via an acrostic—the song acts as a historical timeline of Jewish survival. Each stanza celebrates a different deliverance: from Egypt, Babylon, Haman (Purim), and finally the Greeks (Hanukkah), concluding with a plea for future redemption. Today, it is sung by families worldwide immediately after lighting the Hanukkah candles, usually to a majestic melody adapted from a 16th-century German folk tune.
 
-<audio controls src="https://raw.githubusercontent.com/ReubenInstitute/Media/main/piyutim/מעוז צור.mp3"></audio>
+<audio controls src="https://raw.githubusercontent.com/ReubenInstitute/Media-piyutim/main/MaozTzur.mp3"></audio>
 
 > מָעוֹז צוּר יְשׁוּעָתִי / לְךָ נָאֶה לְשַׁבֵּחַ  
 > תִּכּוֹן בֵּית תְּפִלָּתִי / וְשָׁם תּוֹדָה נְזַבֵּחַ  
@@ -99,7 +99,7 @@ The definitive anthem of the Hanukkah season. Composed in 13th-century Germany b
 The classic holiday song "Chag Purim," written by the famous children's poet Levin Kipnis in the early 1920s. It is the most recognizable song for the holiday of Purim, used in schools and families to celebrate the "carnival" atmosphere of the day.
 
 
-<audio controls src="https://raw.githubusercontent.com/ReubenInstitute/Media/main/piyutim/חג פורים.mp3"></audio>
+<audio controls src="https://raw.githubusercontent.com/ReubenInstitute/Media-piyutim/main/Purim.mp3"></audio>
 
 > חַג פּוּרִים, חַג פּוּרִים,  
 > חַג גָּדוֹל לַיְּהוּדִים!  
@@ -125,7 +125,7 @@ The classic holiday song "Chag Purim," written by the famous children's poet Lev
 
 Written by Rabbi Israel Najara in the 16th century. Uniquely written in Aramaic, it is a foundational Zemer (Shabbat song) sung at the Friday night dinner table. It focuses on the sovereignty of God and the hope for the rebuilding of Jerusalem.
 
-<audio controls src="https://raw.githubusercontent.com/ReubenInstitute/Media/main/piyutim/יה ריבון עלם.mp3"></audio>
+<audio controls src="https://raw.githubusercontent.com/ReubenInstitute/Media-piyutim/main/YahRibbonAlam.mp3"></audio>
 
 > יָהּ רִבּוֹן עָלַם וְעַלְמַיָּא  
 > אַנְתְּ הוּא מַלְכָּא מֶלֶךְ מַלְכַיָּא  
@@ -149,9 +149,9 @@ Written by Rabbi Israel Najara in the 16th century. Uniquely written in Aramaic,
 
 This hymn is attributed to Daniel ben Judah Dayan, a 14th-century Italian poet. It is a poetic summary of the 13 Principles of Faith formulated by Maimonides. Today, it is most commonly used to conclude the evening service (Ma'ariv) on Shabbat and festivals in many Jewish communities.
 
-<audio controls src="https://raw.githubusercontent.com/ReubenInstitute/Media/main/piyutim/יגדל אלוהים חי.mp3"></audio>
+<audio controls src="https://raw.githubusercontent.com/ReubenInstitute/Media-piyutim/main/YigdalElohimChai.mp3"></audio>
 
-<audio controls src="https://raw.githubusercontent.com/ReubenInstitute/Media/main/piyutim/יגדל אלוהים חי 2.mp3"></audio>
+<audio controls src="https://raw.githubusercontent.com/ReubenInstitute/Media-piyutim/main/YigdalElohimChai2.mp3"></audio>
 
 
 > יִגְדַּל אֱלֹהִים חַי וְיִשְׁתַּבַּח  
@@ -191,7 +191,7 @@ This hymn is attributed to Daniel ben Judah Dayan, a 14th-century Italian poet. 
 
 Another masterpiece by Rabbi Israel Najara, this 16th-century poem is written as a love song between God and the Jewish people (represented by the "Yaalah," or doe). Today, it is a favorite at weddings, Bar Mitzvahs, and other happy occasions (Smachot) within the Sephardic and Mizrahi traditions.
 
-<audio controls src="https://raw.githubusercontent.com/ReubenInstitute/Media/main/piyutim/יעלה יעלה.mp3"></audio>
+<audio controls src="https://raw.githubusercontent.com/ReubenInstitute/Media-piyutim/main/YaalahYaalah.mp3"></audio>
 
 
 > יַעֲלָה יַעֲלָה בּוֹאִי לְגַנִּי  
@@ -248,7 +248,7 @@ Another masterpiece by Rabbi Israel Najara, this 16th-century poem is written as
 
 This is an anonymous poem from the Sephardic tradition, written as an alphabetic acrostic. Known as the "Master of Forgiveness," it is perhaps the most famous and catchy song of the High Holiday season, sung with great energy in synagogues during the days of awe.
 
-<audio controls src="https://raw.githubusercontent.com/ReubenInstitute/Media/main/piyutim/אדון הסליחות.mp3"></audio>
+<audio controls src="https://raw.githubusercontent.com/ReubenInstitute/Media-piyutim/main/AdonHaselichot.mp3"></audio>
 
 > אֲדוֹן הַסְּלִיחוֹת בּוֹחֵן לְבָבוֹת  
 > גוֹלֶה עֲמוּקוֹת דּוֹבֵר צְדָקוֹת  
@@ -275,7 +275,7 @@ This is an anonymous poem from the Sephardic tradition, written as an alphabetic
 
 Composed by Rabbi Shimon Lavi in the 16th century, this kabbalistic hymn honors Rabbi Shimon bar Yochai, the traditional author of the Zohar. It is the anthem of the holiday Lag BaOmer, where it is sung around bonfires, but many Sephardic communities also sing it every Friday night.
 
-<audio controls src="https://raw.githubusercontent.com/ReubenInstitute/Media/main/piyutim/בר יוחאי.mp3"></audio>
+<audio controls src="https://raw.githubusercontent.com/ReubenInstitute/Media-piyutim/main/BarYochai.mp3"></audio>
 
 > בַּר יוֹחַאי, נִמְשַׁחְתָּ, אַשְׁרֶיךָ!  
 > שֶׁמֶן שָׂשׂוֹן מֵחֲבֵרֶיךָ  
@@ -304,7 +304,9 @@ Composed by Rabbi Shimon Lavi in the 16th century, this kabbalistic hymn honors 
 
 This is an anonymous Sephardic liturgical poem from the Middle Ages. Its title translates to "O Son of Man, why do you sleep?" It is the opening poem of the Selichot (penitential) service, used during the month of Elul and the High Holidays to "wake up" the soul for repentance.
 
-<audio controls src="https://raw.githubusercontent.com/ReubenInstitute/Media/main/piyutim/בן אדם מה לך נרדם.mp3"></audio>
+<audio controls src="https://raw.githubusercontent.com/ReubenInstitute/Media-piyutim/main/BenAdamMaLekhaNirdam.mp3"></audio>
+
+<audio controls src="https://raw.githubusercontent.com/ReubenInstitute/Media-piyutim/main/BenAdamMaLekhaNirdam2.mp3"></audio>
 
 > בֶּן אָדָם מַה לְּךָ נִרְדָּם, קוּם קְרָא בְּתַחֲנוּנִים  
 > שְׁפֹךְ שִׂיחָה דְּרֹשׁ סְלִיחָה, מֵאֲדוֹן הָאֲדוֹנִים  
@@ -324,6 +326,8 @@ This is an anonymous Sephardic liturgical poem from the Middle Ages. Its title t
 ## Shevet Yehudah - שֵׁבֶט יְהוּדָה
 
 While Shevet Yehudah is the name of a famous historical book by Solomon Ibn Verga, as a song, it usually refers to a piyyut (liturgical poem) concerning the "Scepter of Judah." It is often associated with the Selichot service or the mourning of Tisha B'Av, reflecting on the history and survival of the Jewish people.
+
+<audio controls src="https://raw.githubusercontent.com/ReubenInstitute/Media-piyutim/main/ShevetYehudah.mp3"></audio>
 
 > שֵׁבֶט יְהוּדָה בְּדֹחַק וּבְצַעַר,  
 > הֲיִשְׁאַג אַרְיֵה בַּיַּעַר?!  
@@ -355,6 +359,8 @@ While Shevet Yehudah is the name of a famous historical book by Solomon Ibn Verg
 ## Simchu Nah - שִׂמְחוּ נָא
 
 This is a modern Hebrew folk song originally written and composed by Matityahu Shelem (Weiner), a central figure in the Kibbutz movement and the cultural life of Kibbutz Ramat Yohanan. Originally titled "Simchu Nah b'Simchat ha-Orah" (Rejoice in the Joy of the Light), it was created as a Hanukkah song to celebrate the harvest, the spirit of renewal, and the physical return to the land of Israel. However, the melody became so popular that it was eventually adopted by religious communities, who swapped the word "Orah" for "Torah", becoming a famous anthem for the Hakafot (dancing circles) on Simchat Torah.
+
+<audio controls src="https://raw.githubusercontent.com/ReubenInstitute/Media-piyutim/main/SimchuNah.mp3"></audio>
 
 > שִׂמְחוּ נָא, שִׂמְחוּ נָא, בְּשִׂמְחַת הַתּוֹרָה!  
 > שִׂמְחוּ נָא, שִׂמְחוּ נָא, בְּשִׂמְחַת הַתּוֹרָה!  
