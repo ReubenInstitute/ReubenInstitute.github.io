@@ -6,9 +6,7 @@ Guidelines for Dev Lab session entries and log index maintenance.
 
 * The entry should read as a narrative, diary-like account
 * Decisions and actions should be described in the first person plural ("we")
-* A model should be named and referred to in the third person when an action is worth attributing to it specifically
-  * "He," or "they," should be used when referring to the assistant, the collaborative partner
-  * "It" should be used when referring to the tool or software itself
+* A model should be named and referred to in the third person only when an action is worth attributing to him specifically. "It" should be used when referring to the tool or software itself
 * The code, system, or hardware itself should be described in the passive voice; the active voice should be used when the action was the work itself
 * Chronological order should be kept where the sequence of decisions matters; other changes don't need their order preserved
 * Everything should be logged, including abandoned work; what was tried and dropped matters as much as what was kept
