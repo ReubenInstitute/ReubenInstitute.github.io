@@ -1,8 +1,4 @@
-## Sessions
-
-#### [26 Sep 2026 – language guideline](20260926.md)
-
-Guideline read literally → vulgar words in caps. Rewritten: describe substance, keep register. Pronouns: he/they assistant, it tool, never she. Passive only code/system/hardware; active work. Glossary end. Fixed in place via rebase, not patched on top (original wording gone from history). `URL_FUCKUPS` untouched: dev jargon for outside-data defects, out of scope.
+## Dev Lab Logs (for agents, distilled)
 
 #### [21 Sep 2026 – MediaStudio consolidated](20260921b.md)
 
