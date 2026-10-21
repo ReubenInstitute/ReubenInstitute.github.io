@@ -50,22 +50,17 @@ We produce short-form multimedia video series for social media platforms. The vi
 <a href="https://open.spotify.com/show/3EiTxA502w6zyKhEpEvu1V?si=VPCanwiRRqukKdTNSXWLxg">
 	<i class="fa-brands fa-spotify"></i> Spotify: open.spotify.com/show/3EiT...
 </a>
-
 </section>
 
 
 <section markdown="1">
-
 ## [GPS Hebrew Clock](HebrewClock.md)
 
 A timepiece that tells the hour the ancient way — dividing daylight and darkness into twelve proportional parts, shifting with the seasons. More a conceptual instrument than a standard clock, it connects modern timekeeping to the temporal rhythm of Hebrew prayer and tradition. It's at once a practical tool, a curiosity, and a quiet reminder that time itself can be measured by a sacred calendar.
-
 </section>
 
 
-
 <section markdown="1">
-
 ## Android Apps
 
 [**HebrewDate:**](apps/HebrewDateAndroidApp.md) An application that displays the current Gregorian and Hebrew dates, including the Hebrew date in gematria and the day’s holiday, along with a browsable Hebrew month calendar. It offers home-screen widgets for the date, a monthly calendar, and an analog clock that can show halachic times, as well as an optional ongoing notification containing the current date. The clock’s time definitions can be configured through preset or custom opinions for dawn, misheyakir, and nightfall.
@@ -73,16 +68,13 @@ A timepiece that tells the hour the ancient way — dividing daylight and darkne
 [**Psalms:**](apps/PsalmsAndroidApp.md) An application for reading the book of Psalms, presenting each psalm with its title and description, verse numbers in Hebrew, and the text arranged in poetic lines. It can play audio recordings of the psalms from two downloadable sets—a cloned voice and an original recording—stored locally on the device, and during playback it highlights the individual word being spoken.
 
 [**Scriptures:**](apps/ScripturesAndroidApp.md) Torah, Prophets, Writings, and the core texts of the Oral Law in a single Android app. The Institute's full text corpus, navigable, with attention to RTL typography.
-
 </section>
 
 
 <section markdown="1">
-
 ## [IVR](media/IVR.md)
 
 A phone‑based interface to the Institute's audio library, for those without smartphones or who prefer no screen. Keypress menus give access to the daily Psalm, the weekly Parashah, and a voice‑guided quiz.
-
 </section>
 
 
