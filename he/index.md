@@ -1,7 +1,6 @@
 ---
 layout: default
 lang: he
-dir: rtl
 ---
 
 # מכון ראובן

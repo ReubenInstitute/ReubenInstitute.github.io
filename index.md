@@ -12,17 +12,6 @@ By combining rigorous academic standards with modern technology, the Institute e
 historical traditions remain accessible and accurate for contemporary audiences.
 
 
-
-# מכון ראובן
-
-![](/@@/logo.png)
-
-_**"קנאות לדיוק"**_
-
-מכון ראובן הוא מוסד מדעי ובית הוצאה לאור המוקדש להפצה ולהוצאה לאור של כתבי יסוד בעברית ובארמית. לאור ריבוי אי־הדיוקים במהדורות הקיימות, המכון משתמש בחומרי מקור עתיקים מנחלת הכלל כדי להפיק תוכן מוקפד בדפוס, במדיה דיגיטלית, בשמע ובווידאו. בשילוב אמות מידה אקדמיות מחמירות עם טכנולוגיה מודרנית, המכון דואג לכך שמסורות היסטוריות יישארו נגישות ומדויקות לקהלים בני זמננו.
-
-
-
 <section markdown="1">
 ## Multimedia Series
 
